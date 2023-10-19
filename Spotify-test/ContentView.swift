@@ -10,26 +10,40 @@ import WebKit
 
 struct ContentView: View {
     
-    private func getAccessTokenFromWebView() -> WKWebView? {
-        guard let urlRequest = APIService.shared.getAccessTokenURL() else { return nil }
-        let webView = WKWebView()
+//    private func getAccessTokenFromWebView() -> WKWebView? {
+//        guard let urlRequest = APIService.shared.getAccessTokenURL() else { return nil }
+//        let webView = WKWebView()
+//
+//        webView.load(urlRequest)
+//        return webView
         
-        webView.load(urlRequest)
-        return webView
-        
-    }
+//    }
+    
+    @State private var token = UserDefaults.standard.value(forKey: "Authorization")
     
     var body: some View {
-        VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundColor(.accentColor)
-//            Text("Hello, world!")
-            WebView()
-                .ignoresSafeArea(.all)
+        ZStack {
+            
+            if token != nil {
+                Text("omg hi")
+                    .foregroundColor(.black)
+                    .onAppear {
+                        print(token)
+                        print("contentView")
+                        Task {
+                            let songs = try await APIService.shared.search()
+                        }
+                    }
+                
+                
+            } else {
+                WebView()
+                    .ignoresSafeArea(.all)
+            }
+//
+           
                 
         }
-//        .padding()
     }
 }
 
@@ -60,10 +74,23 @@ class WebViewNavDelegate: NSObject, WKNavigationDelegate {
         guard let urlString = webView.url?.absoluteString else { return }
         print(urlString)
         
+        var tokenString = ""
         if urlString.contains("#access_token=") {
             let range = urlString.range(of:"#access_token=")
             guard let index = range?.upperBound else { return }
-            print(urlString[index...])
+            
+            tokenString = String(urlString[index...])
+        }
+        
+        if !tokenString.isEmpty {
+            let range = tokenString.range(of: "&token_type=Bearer")
+            guard let index = range?.lowerBound else { return }
+            
+            tokenString = String(tokenString[..<index])
+            print(tokenString)
+            
+            UserDefaults.standard.setValue(tokenString, forKey: "Authorization")
+            webView.removeFromSuperview()
         }
     }
 }
