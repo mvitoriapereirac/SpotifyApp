@@ -7,9 +7,47 @@
 
 import Foundation
 
+
+protocol Authable {
+    
+    func makeLogin()
+    
+}
+
+class APIService2: Authable {
+    func makeLogin() {
+        // usa um banco de dados MySql e outras dependencias, e outras formas de auth.
+    }
+}
+
+class GoogleApiService: Authable {
+    func makeLogin() {
+        
+    }
+    
+    
+}
+
+class ViewModel {
+    
+    private let authentication: Authable
+    
+    init(auth: Authable){
+        self.authentication = auth
+    }
+        
+}
+
+let viewmd = ViewModel(auth: GoogleApiService())
+
+
 class APIService {
     static let shared = APIService()
-    
+    var list: [LastListenedItem] = []
+    var dict: [String : String] = [:]
+    var genres: [[String]] = []
+
+
     func getAccessTokenURL() -> URLRequest? {
         var components = URLComponents()
         components.scheme = "https"
@@ -23,7 +61,7 @@ class APIService {
         return URLRequest(url: url)
     }
     
-    func createURLRequest() -> URLRequest? {
+    func createURLSearchRequest(searchQuery: String) -> URLRequest? {
         var components = URLComponents()
         components.scheme = "https"
         components.host = APIConstants.apiHost
@@ -31,7 +69,7 @@ class APIService {
         
         components.queryItems = [
             URLQueryItem(name: "type", value: "track"),
-            URLQueryItem(name: "query", value: "bad bunny")
+            URLQueryItem(name: "query", value: searchQuery)
         ]
         
         guard let url = components.url else { return nil }
@@ -52,13 +90,179 @@ class APIService {
 //    https://api.spotify.com/v1/search?type=track&query=bad bunny
     
     
-    func search() async throws -> [String] {
+    func createURLRecentlyListenedRequest() -> URLRequest? {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = APIConstants.apiHost
+        components.path = APIConstants.recentlyPlayedPath
+        
+        guard let url = components.url else { return nil }
+        print(url)
+        var urlRequest = URLRequest(url: url)
+        print(urlRequest)
+
+        let token: String = UserDefaults.standard.value(forKey: "Authorization") as! String
+        print("token: " + token)
+        
+        urlRequest.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpMethod = "GET"
+        
+        return urlRequest
+    }
+    
+    func getRecentlyListened() async throws -> [LastListenedItem] {
+        guard let urlRequest = createURLRecentlyListenedRequest() else { throw NetworkError.invalidURL }
+        print(urlRequest)
+        
+        let session = URLSession.shared
+        do {
+            let (data, response) = try await session.data(for: urlRequest)
+            let decoder = JSONDecoder()
+//            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let results = try decoder.decode(LastListenedResponse.self, from: data)
+            
+//            let list = results.tracks.items
+//            let list = results.items[0].tracks.artists[0].href
+            let list = results.items
+
+//            let songs = list.map({$0.track})
+            print(list)
+            print("lista ouvidos recentes")
+            print(list.count)
+            return list
+//
+        }
+        catch {
+            print("error: ", error)
+//            UserDefaults.standard.set(nil, forKey: "Authorization")
+
+        }
+        
+        return []
+
+    }
+    
+    func getNameAndURLStrings() {
+        Task {
+            try await list = APIService.shared.getRecentlyListened()
+            dict = APIService.shared.transformIntoDict(list: list)
+            try await genres = APIService.shared.getRecentlyPlayedGenres()
+            print("********")
+
+            print(dict)
+        }
+         
+    
+    }
+    
+    func createArtistsGenreURLRequests(dict: [String : String]) -> [URLRequest]? {
+        var urlRequestsArray: [URLRequest] = []
+        print(dict)
+        for item in dict {
+            let urlString = item.value
+            print(";;;;;;;;;;;;;;")
+            print(urlString)
+            var pathString = ""
+            if !urlString.isEmpty {
+                if urlString.contains("/artists/") {
+                    let range = urlString.range(of:"/artists/")
+                    guard let index = range?.upperBound else { return urlRequestsArray }
+                    pathString = String(urlString[index...])
+                    
+                }
+                
+            }
+            
+            var components = URLComponents()
+            components.scheme = "https"
+            components.host = APIConstants.apiHost
+            components.path = APIConstants.artistInfoPath + pathString
+            
+            guard let url = components.url else { return urlRequestsArray }
+            print(url)
+            var urlRequest = URLRequest(url: url)
+            print(urlRequest)
+
+            let token: String = UserDefaults.standard.value(forKey: "Authorization") as! String
+            print("token: " + token)
+            
+            urlRequest.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.httpMethod = "GET"
+            
+            urlRequestsArray.append(urlRequest)
+        }
+        
+        print("=============")
+        print(urlRequestsArray)
+        return urlRequestsArray
+        
+    }
+    
+    
+
+    
+    func transformIntoDict(list: [LastListenedItem]) -> [String : String]{
+        var dict: [String : String] = [:]
+        let amount = list.count
+        var nameAux = ""
+        var aux = 0
+            for item in list {
+                let artists = item.track.artists
+                for artist in artists {
+                    let url = artist.href
+                    let name = artist.name
+                    if dict.keys.contains(name) {
+                        nameAux = name + "\(aux)"
+                        dict.updateValue(url, forKey: nameAux)
+                        aux += 1
+
+
+                    } else {
+                        dict.updateValue(url, forKey: name)
+                    }
+                }
+            }
+        print("lista dict")
+        print(dict)
+        return dict
+        
+    }
+    
+    func getRecentlyPlayedGenres() async throws -> [[String]] {
+        var genresArray: [[String]] = []
+        guard let urlRequestArray = createArtistsGenreURLRequests(dict: dict) else { throw NetworkError.invalidURL }
+        let session = URLSession.shared
+        for item in urlRequestArray {
+            do {
+                let (data, response) = try await session.data(for: item)
+                let decoder = JSONDecoder()
+                let results = try decoder.decode(GenresResponse.self, from: data)
+                let genres = results.genres
+                genresArray.append(genres)
+                
+            } catch {
+                print("error: ", error)
+                UserDefaults.standard.set(nil, forKey: "Authorization")
+
+            }
+        }
+        
+        print("&&&&&")
+        print(genresArray)
+        return genresArray
+
+    }
+    
+    func search(artist: String) async throws -> [String] {
         print("search")
-        guard let urlRequest = createURLRequest() else { throw NetworkError.invalidURL }
+        guard let urlRequest = createURLSearchRequest(searchQuery: artist) else { throw NetworkError.invalidURL }
         print(urlRequest)
         print(urlRequest.allHTTPHeaderFields)
         
         let session = URLSession.shared
+//        var list: [Item] = []
         do {
             let (data, response) = try await session.data(for: urlRequest)
             let decoder = JSONDecoder()
@@ -66,7 +270,9 @@ class APIService {
             let results = try decoder.decode(Response.self, from: data)
             
             let list = results.tracks.items
+            let songs = list.map({$0.name})
             print(list)
+            return songs
 //        } catch {
 //            print(error)
 //        }
@@ -87,13 +293,14 @@ class APIService {
             UserDefaults.standard.set(nil, forKey: "Authorization")
 
         }
+        
         return []
         
     }
     
 }
 
-
+//SEARCH STRUCTS
 struct Response: Codable {
     let tracks: Track
 }
@@ -103,5 +310,32 @@ struct Track: Codable {
 }
 
 struct Item: Codable {
-    let name: String?
+    let name: String
+}
+
+//LAST LISTENED STRUCTS
+
+struct LastListenedResponse: Codable {
+    let items: [LastListenedItem]
+}
+
+struct LastListenedItem: Codable {
+    let track: LastListenedTrack
+}
+
+struct LastListenedTrack: Codable {
+    let name: String
+    let artists: [Artists]
+}
+
+struct Artists: Codable {
+    let href: String
+    let name: String
+}
+
+//GENRES STRUCT
+
+struct GenresResponse: Codable {
+    let genres: [String]
+    let name: String
 }

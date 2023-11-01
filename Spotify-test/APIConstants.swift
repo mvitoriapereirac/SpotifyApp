@@ -14,7 +14,11 @@ enum APIConstants {
     static let clientSecret = "986d9e46d118485eb2703cb33518f7f9"
     static let redirectUrl = "https://google.com"
     static let responseType = "token"
-    static let scopes = "user-read-private"
+//    static let scopes = ["user-read-private"] //search scope: "user-read-private"
+    static let scopes = "user-read-recently-played" //
+    static let searchPath = "/v1/search"
+    static let recentlyPlayedPath = "/v1/me/player/recently-played"
+    static let artistInfoPath = "/v1/artists/"
     
     static var authParams = [
         "client_id": clientId,

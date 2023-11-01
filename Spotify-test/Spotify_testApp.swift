@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Spotify_testApp: App {
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppNavigation()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
