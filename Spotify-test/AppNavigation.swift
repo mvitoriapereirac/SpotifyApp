@@ -24,17 +24,19 @@ struct AppNavigation: View {
         
         @available(iOS 16.0, *)
         private var selectedScreen: some View {
-            ContentView()
+            HomeView()
                 .navigationDestination(for: Route.self) { route in
                     switch route {
                     case .gridView:
                         GridView()
                         
                     case .resultsView:
-                        ResultsView(isFirstVisitToday: false)
+                        GridViewModel.shared.makeDetailedResultsView()
+                            .navigationBarTitleDisplayMode(.large)
+                            
                         
                     case .homeView:
-                        ContentView()
+                        HomeView()
                         
                     case .todaysResultsView:
                         ResultsView(isFirstVisitToday: true)

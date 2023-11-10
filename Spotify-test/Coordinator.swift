@@ -35,6 +35,8 @@ class Coordinator: ObservableObject {
         path.append(view)
     }
     
+   
+    
     func goToGridView() {
         path.append(Route.gridView)
     }
@@ -48,7 +50,7 @@ class Coordinator: ObservableObject {
     }
 }
 
-enum Route {
+enum Route: Hashable {
     case todaysResultsView
     case resultsView
     case gridView

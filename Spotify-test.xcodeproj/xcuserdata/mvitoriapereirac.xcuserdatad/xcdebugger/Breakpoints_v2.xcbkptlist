@@ -173,8 +173,8 @@
             filePath = "Spotify-test/Color.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "blend(color1:intensity1:color2:intensity2:color3:intensity3:color4:intensity4:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -861,7 +861,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A59425F2-4424-450E-ADCD-C066A675C051"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spotify-test/DailyLogManager.swift"
@@ -930,8 +930,8 @@
             filePath = "Spotify-test/ResultsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "makeUIColorBlend()"
             landmarkType = "7">
             <Locations>
@@ -972,7 +972,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5474E5F5-99F2-4619-B476-EC8DE3C19A62"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spotify-test/DailyLogManager.swift"
@@ -988,19 +988,19 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "05C63070-0587-4A2E-B32C-DC88E58427D4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spotify-test/ResultsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "05C63070-0587-4A2E-B32C-DC88E58427D4 - 5ee11ee3801edfe9"
+                  uuid = "05C63070-0587-4A2E-B32C-DC88E58427D4 - 5ee11ee3801eddda"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1010,12 +1010,12 @@
                   urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "216">
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "184">
                </Location>
                <Location
-                  uuid = "05C63070-0587-4A2E-B32C-DC88E58427D4 - 5ee11ee3801edfe9"
+                  uuid = "05C63070-0587-4A2E-B32C-DC88E58427D4 - 5ee11ee3801eddda"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1025,213 +1025,9 @@
                   urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "228">
-               </Location>
-               <Location
-                  uuid = "05C63070-0587-4A2E-B32C-DC88E58427D4 - 5ee11ee3801edfe9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  uuid = "05C63070-0587-4A2E-B32C-DC88E58427D4 - 5ee11ee3801edfe9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "220">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F24099B9-864A-47DD-9053-831C69856E59"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/ResultsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "F24099B9-864A-47DD-9053-831C69856E59 - 5ee11ee3801edc80"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "1312">
-               </Location>
-               <Location
-                  uuid = "F24099B9-864A-47DD-9053-831C69856E59 - 5ee11ee3801edcaf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "1228">
-               </Location>
-               <Location
-                  uuid = "F24099B9-864A-47DD-9053-831C69856E59 - 5ee11ee3801edcaf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "1144">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "73B20248-76B7-40C0-ADF0-E7DA822DDAC0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/ResultsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "73B20248-76B7-40C0-ADF0-E7DA822DDAC0 - 5ee11ee3801edd46"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "2152">
-               </Location>
-               <Location
-                  uuid = "73B20248-76B7-40C0-ADF0-E7DA822DDAC0 - 5ee11ee3801edd46"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "2188">
-               </Location>
-               <Location
-                  uuid = "73B20248-76B7-40C0-ADF0-E7DA822DDAC0 - 5ee11ee3801edd46"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Spotify_test.ResultsView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "1536">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2FA07C2A-955F-4D05-859E-350C2D1650B1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/GridView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "2FA07C2A-955F-4D05-859E-350C2D1650B1 - 4a106ef5357c5608"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in Spotify_test.GridView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/GridView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "2FA07C2A-955F-4D05-859E-350C2D1650B1 - 4a106ef5357c5608"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in Spotify_test.GridView.body.getter : some"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/GridView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "188">
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "164">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1312,6 +1108,609 @@
                   offsetFromSymbolStart = "776">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C8410F0-8D30-4EE0-B86D-22AFE489B12F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/ResultsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5C8410F0-8D30-4EE0-B86D-22AFE489B12F - b15df4456f777a8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt;&gt;&gt; in Spotify_test.ResultsView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "5C8410F0-8D30-4EE0-B86D-22AFE489B12F - 2c956dc40b030479"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt;&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt;&gt;)&gt;&gt;&gt; in Spotify_test.ResultsView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D6A164B-0071-4167-9727-6C2F65DD6C86"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "666D158B-C044-4E3F-9031-7698365B0282"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "WebViewNavDelegate"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "030159AB-D084-4207-A560-29D805655BF6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "WebViewNavDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "030159AB-D084-4207-A560-29D805655BF6 - 39d6952054d68ce1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didFinish: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "030159AB-D084-4207-A560-29D805655BF6 - 39d6952054d68ca3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didFinish: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "190"
+                  endingLineNumber = "190"
+                  offsetFromSymbolStart = "1164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "808F6CDE-684C-46AA-BB74-C5351507A7D3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "webView(_:didCommit:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "808F6CDE-684C-46AA-BB74-C5351507A7D3 - d1e5d57bbb393db0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didCommit: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "808F6CDE-684C-46AA-BB74-C5351507A7D3 - d1e5d57bbb393c53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didCommit: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58C1D490-E02B-4F1B-882C-0C94243136FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "webView(_:didCommit:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58C1D490-E02B-4F1B-882C-0C94243136FA - d1e5d57bbb393c2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didCommit: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "1856">
+               </Location>
+               <Location
+                  uuid = "58C1D490-E02B-4F1B-882C-0C94243136FA - d1e5d57bbb3939d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didCommit: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "3656">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64B5D605-E8E0-45D3-A72C-8AC1E89551DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/GridView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B4EBCBF-1341-426E-BED8-399C7272840B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/GridView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4B4EBCBF-1341-426E-BED8-399C7272840B - dce35cc7663fbb75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 (Swift.Int) -&gt; Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;, Spotify_test.RectangleView&gt;&gt;&gt; in closure #1 (Spotify_test.DayInfo) -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;, Spotify_test.RectangleView&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.FetchedResults&lt;Spotify_test.DayInfo&gt;, Spotify_test.DayInfo, SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;, Spotify_test.RectangleView&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Spotify_test.MoodCaption, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Spotify_test.GridView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/GridView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "4B4EBCBF-1341-426E-BED8-399C7272840B - 852ebf4ac0fa70a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 (Swift.Int) -&gt; Swift.Optional&lt;Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 (Spotify_test.DayInfo) -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.FetchedResults&lt;Spotify_test.DayInfo&gt;, Spotify_test.DayInfo, SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Spotify_test.MoodCaption, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Spotify_test.GridView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/GridView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "4B4EBCBF-1341-426E-BED8-399C7272840B - 79be0bb5d5e1c494"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; Spotify_test.RectangleView in closure #1 (Swift.Int) -&gt; Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt; in closure #1 (Spotify_test.DayInfo) -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.FetchedResults&lt;Spotify_test.DayInfo&gt;, Spotify_test.DayInfo, SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Spotify_test.MoodCaption, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Spotify_test.GridView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/GridView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F71A300-6E56-40BF-BE4C-939090B6C164"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/ResultsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "makeDateString(day:month:weekday:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F82CE0FD-E4F2-4969-A651-72EABDB8B8F3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/ResultsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "makeDateString(day:month:weekday:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06EF4A3E-E301-4CC1-8923-BE0EA2034C07"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/ResultsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "makeDateString(day:month:weekday:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "06EF4A3E-E301-4CC1-8923-BE0EA2034C07 - a754c637f8b4c02a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.ResultsViewModel.makeDateString(day: Swift.Int, month: Swift.Int, weekday: Swift.Int) -&gt; Swift.String"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "06EF4A3E-E301-4CC1-8923-BE0EA2034C07 - a754c637f8b4c02a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.ResultsViewModel.makeDateString(day: Swift.Int, month: Swift.Int, weekday: Swift.Int) -&gt; Swift.String"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1884A0A4-97A2-4D46-A7E9-ACD5DBE70828"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/DayImage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1884A0A4-97A2-4D46-A7E9-ACD5DBE70828 - 48a0cc87d29085c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.DayImage.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/DayImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "1884A0A4-97A2-4D46-A7E9-ACD5DBE70828 - 48a0cc87d29085c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.DayImage.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/DayImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4243D7CE-0185-4E01-AD98-1FA79669627A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/DayImage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4243D7CE-0185-4E01-AD98-1FA79669627A - 48a0cc87d2908206"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.DayImage.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/DayImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "4243D7CE-0185-4E01-AD98-1FA79669627A - 48a0cc87d2908206"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.DayImage.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/DayImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "588">
+               </Location>
+               <Location
+                  uuid = "4243D7CE-0185-4E01-AD98-1FA79669627A - 48a0cc87d2908206"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.DayImage.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/DayImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "732">
+               </Location>
+               <Location
+                  uuid = "4243D7CE-0185-4E01-AD98-1FA79669627A - 48a0cc87d2908206"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.DayImage.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/DayImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "768">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DE53FB5-30F4-4687-8151-00B0C7072477"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/ResultsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0DE53FB5-30F4-4687-8151-00B0C7072477 - 4503cd563095706b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.KeyboardAwarePadding(background: SwiftUI.Color) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in Spotify_test.ResultsView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1416">
+               </Location>
+               <Location
+                  uuid = "0DE53FB5-30F4-4687-8151-00B0C7072477 - f2366c045808ce30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.background&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onSubmit(of: SwiftUI.SubmitTriggers, _: () -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.KeyboardAwarePadding(background: SwiftUI.Color) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in Spotify_test.ResultsView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "0DE53FB5-30F4-4687-8151-00B0C7072477 - 4503cd563095706b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.KeyboardAwarePadding(background: SwiftUI.Color) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in Spotify_test.ResultsView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+               <Location
+                  uuid = "0DE53FB5-30F4-4687-8151-00B0C7072477 - 4503cd563095706b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.KeyboardAwarePadding(background: SwiftUI.Color) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in Spotify_test.ResultsView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/ResultsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34907C75-DD6C-4CEF-8718-76F003D7F829"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/PhotoModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "transferRepresentation"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

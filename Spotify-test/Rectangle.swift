@@ -13,6 +13,7 @@ struct RectangleView: View {
     @EnvironmentObject var coordinator: Coordinator
     let RectColor: UIColor
     let frame: CGFloat
+    let dayInfo: FetchedResults<DayInfo>.Element? = nil
     var body: some View {
         ZStack {
             Rectangle()
@@ -21,11 +22,11 @@ struct RectangleView: View {
 
 //                .foregroundColor(Color(viewModel.makeUIColorBlend()))
                 
-                .onTapGesture {
-                    coordinator.goToResultsView()
-                    
-                    
-                }
+//                .onTapGesture {
+//                    coordinator.goToResultsView()
+//                    
+//                    
+//                }
         }
        
     }

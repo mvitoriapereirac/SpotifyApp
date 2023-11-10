@@ -8,7 +8,9 @@
 import Foundation
 import SwiftUI
 import CoreData
-
+import Photos
+import PhotosUI
+import CoreTransferable
 
 
 class ResultsViewModel: ObservableObject {
@@ -23,14 +25,11 @@ class ResultsViewModel: ObservableObject {
     @Published var day = Calendar.current.component(.day, from: Date())
     @Published var month = Calendar.current.component(.month, from: Date())
     @Published var color: UIColor?
+    let weekDays = ["Dom": 1, "Seg": 2, "Ter": 3, "Qua": 4, "Qui": 5, "Sex": 6, "Sab": 7]
 
     
     @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
     @Environment(\.managedObjectContext) var moc
-//
-    
-
-
 
     var bright: Mood {
         let mainMoods = MainMoods()
@@ -129,10 +128,7 @@ class ResultsViewModel: ObservableObject {
         genresAmountDict.updateValue(aux, forKey: dark.mood)
         aux = 0
         
-//        for k in fun.genres {
-//            genresAmountDict.updateValue(countGenres(genre: k), forKey: fun.mood)
-//            print(k)
-//        }
+
         
         for k in fun.genres {
             if aux == 0 {
@@ -191,6 +187,19 @@ class ResultsViewModel: ObservableObject {
         }
         
         return UIColor()
+    }
+    
+    func makeDateString(day: Int, month: Int, weekday: Int) -> String {
+        print(weekday)
+        var dayName = ""
+        for i in weekDays {
+            if i.value == weekday {
+                dayName = i.key
+            }
+        }
+        print(dayName + ", " + String(day) + "/" + String(month))
+        return dayName + ", " + String(day) + "/" + String(month)
+
     }
     
 }

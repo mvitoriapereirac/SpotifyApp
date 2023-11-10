@@ -11,85 +11,148 @@ import SwiftUI
 struct GridView: View {
     @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
     @EnvironmentObject var coordinator: Coordinator
-    @ObservedObject var viewModel  = GridViewModel()
-
-
-    let weekDays = ["Dom": 0, "Seg": 1, "Ter": 2, "Qua": 3, "Qui": 4, "Sex": 5, "Sab": 6]
+    @ObservedObject var viewModel = GridViewModel.shared
+    
+    
     let columns = [
-            GridItem(.flexible()),
-            GridItem(.flexible()),
-            GridItem(.flexible()),
-            GridItem(.flexible()),
-            GridItem(.flexible()),
-            GridItem(.flexible()),
-            GridItem(.flexible())
-
-
-        ]
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
     var body: some View {
-        ScrollView {
+        VStack {
+            MoodCaption(color: .projectWhite)
             LazyVGrid(columns: columns) {
                 Text("D")
+                    .font(.headline)
                 Text("S")
-                Text("T")
-                Text("Q")
-                Text("Q")
-                Text("S")
-                Text("S")
-
-//
-//
-//
+                    .font(.headline)
                 
-                ForEach(daysInfo, id: \.self) { dayInfo in
-                    if dayInfo == daysInfo.first {
-                        ForEach(0...6, id: \.self) { index in
-                            
-                            if daysInfo.first?.weekday ?? 0 == index {
-
-                                if index != 0 {
-                                    let arrayIterator = Array(1...(index - 1))
-                                    ForEach(arrayIterator, id: \.self) { i in
-                                        RectangleView(RectColor: .clear, frame: 50)
-                                    }
-
-                                }
-                                
-                                
-                                
-                            }
-                        }
-
-                    }
-                    
-                    RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
-                   
-                }
-
-            }
-            .onAppear{
-                print("aqui \(daysInfo)")
+                Text("T")
+                    .font(.headline)
+                
+                Text("Q")
+                    .font(.headline)
+                
+                Text("Q")
+                    .font(.headline)
+                
+                Text("S")
+                    .font(.headline)
+                
+                Text("S")
+                    .font(.headline)
             }
             .padding()
-        }
+            
+            ScrollView {
+                
+                LazyVGrid(columns: columns) {
+                    
+//                    if daysInfo.first?.weekday != 0 || daysInfo.first?.weekday != 1 || daysInfo.first?.weekday != 2 {
+//                        ForEach(1...((daysInfo.first?.weekday ?? 0) - 1), id: \.self) { _ in
+//                            RectangleView(RectColor: .clear, frame: 50)
+//
+//                        }
+//                        ForEach(daysInfo, id: \.self) { dayInfo in
+//                            RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
+//                                .onTapGesture {
+//                                    viewModel.colorFromSelected = dayInfo.color as? UIColor
+//                                    viewModel.dayFromSelected = Int(dayInfo.day)
+//                                    viewModel.monthFromSelected = Int(dayInfo.month)
+//                                    viewModel.weekdayFromSelected = Int(dayInfo.weekday)
+//                                    coordinator.goToResultsView()
+//
+//                                }
+//                        }
+//                    }
+                    
+                    
+                                        ForEach(daysInfo, id: \.self) { dayInfo in
+                                            if dayInfo == daysInfo.first {
+                                                ForEach(0...6, id: \.self) { index in
+                    
+                                                    if daysInfo.first?.weekday ?? 0 == index {
+                    
+                                                        if index != 0 || index != 1 || index != 2 {
+                                                            let arrayIterator = Array(1...(index - 1))
+                                                            ForEach(arrayIterator, id: \.self) { i in
+                                                                RectangleView(RectColor: .clear, frame: 50)
+                    
+                     
+                                                            }
+                    
+                                                        }
+                                                        else if index == 1 || index == 2 {
+                                                            if index == 1 {
+                                                                RectangleView(RectColor: .clear, frame: 50)
 
+                                                            }
+                                                            if index == 2 {
+                                                                RectangleView(RectColor: .clear, frame: 50)
+                                                                RectangleView(RectColor: .clear, frame: 50)
+
+                                                            }
+
+                                                        }
+                    
+                    
+                    
+                                                    }
+                                                }
+                    
+                                            }
+                    
+                                            RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
+                                                .onTapGesture {
+                                                    viewModel.colorFromSelected = dayInfo.color as? UIColor
+                                                    viewModel.dayFromSelected = Int(dayInfo.day)
+                                                    viewModel.monthFromSelected = Int(dayInfo.month)
+                                                    viewModel.weekdayFromSelected = Int(dayInfo.weekday)
+                                                    viewModel.dayInfo = dayInfo
+                                                    coordinator.goToResultsView()
+                    
+                                                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                                        }
+                    
+                }
+                .onAppear{
+                    print("aqui \(daysInfo)")
+                }
+                .padding()
+            }
+        }
+        
+        
     }
 }
 
 class GridViewModel: ObservableObject {
-    func makeBlankSpaces(index: Int) -> [RectangleView] {
-        let arrayIterator = Array(0...index)
-        var arrayBlankRects: [RectangleView] = []
-        if index == 0 {
-            return []
-        } else {
-            for _ in arrayIterator {
-                arrayBlankRects.append(RectangleView(RectColor: .clear, frame: 50))
-            }
-            
-        }
+    
+    static let shared = GridViewModel()
+    @Published var dayFromSelected: Int? = 0
+    @Published var monthFromSelected: Int? = 0
+    @Published var weekdayFromSelected: Int? = 0
+    @Published var colorFromSelected: UIColor? = UIColor.clear
+    @Published var dayInfo: FetchedResults<DayInfo>.Element? = nil
+    
+    
+    
+    //TO DO: implement this method on a details manager
+    func makeDetailedResultsView() -> ResultsView {
+        return ResultsView(isFirstVisitToday: false, dayFromSelected: self.dayFromSelected, monthFromSelected: self.monthFromSelected, weekdayFromSelected: self.weekdayFromSelected, colorFromSelected: self.colorFromSelected, dayInfo: self.dayInfo)
         
-       return arrayBlankRects
+        
     }
 }
 

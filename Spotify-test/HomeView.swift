@@ -8,10 +8,10 @@
 import SwiftUI
 import WebKit
 
-struct ContentView: View {
+struct HomeView: View {
     
     
-//    @State private var token = UserDefaults.standard.value(forKey: "Authorization")
+
     @EnvironmentObject var coordinator: Coordinator
     @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
     @Environment(\.managedObjectContext) var moc
@@ -25,8 +25,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            
-
+            VStack(spacing: 50) {
                 Button(action: {
 //                    dailyLogManager.AllowLogButtonIfNeeded() { success in
 //                        showWebView = success
@@ -41,6 +40,17 @@ struct ContentView: View {
                 {
                     Text(dailyLogManager.shouldRefresh ? "toque aqui para comecar" : "ainda não está na hora")
                 }
+                
+                
+                Button(action: {
+                    coordinator.goToGridView()
+                }) {
+                   Text("see your logs")
+                }
+            }
+            .padding(50)
+
+                
                 
                 if showWebView {
                     ZStack {
@@ -112,6 +122,13 @@ struct ContentView: View {
                 }
                 
             }
+        .gesture(
+            DragGesture()
+                .onChanged { gesture in
+                    coordinator.goToGridView()
+                }
+        
+        )
         .onAppear {
             dailyLogManager.AllowLogButtonIfNeeded { success in
                 enableButton = dailyLogManager.shouldRefresh
@@ -158,11 +175,44 @@ class WebViewNavDelegate: NSObject, WKNavigationDelegate, ObservableObject {
     var iterator = 0
     var isFirstLogin = true
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        guard let urlString = webView.url?.absoluteString else { return }
+        print("url string 1 \(urlString)")
+    }
+    
+//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+//
+//
+//        guard let urlString = webView.url?.absoluteString else { return }
+//        print("url string 2 \(urlString)")
+//
+//
+//        if urlString.contains("#access_token=") {
+//
+//            let range = urlString.range(of:"#access_token=")
+//            guard let index = range?.upperBound else { return }
+//
+//            tokenString = String(urlString[index...])
+//        }
+//
+//        if !tokenString.isEmpty {
+//            let range = tokenString.range(of: "&token_type=Bearer")
+//            guard let index = range?.lowerBound else { return }
+//
+//            tokenString = String(tokenString[..<index])
+//            print(tokenString)
+//
+//            UserDefaults.standard.setValue(tokenString, forKey: "Authorization")
+//            TokenActivitySign.toggle()
+//
+//
+//
+//        }
+//    }
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         
         guard let urlString = webView.url?.absoluteString else { return }
-        print(urlString)
+        print("url string 2 \(urlString)")
 
         
         if urlString.contains("#access_token=") {
@@ -186,38 +236,15 @@ class WebViewNavDelegate: NSObject, WKNavigationDelegate, ObservableObject {
 
             
         }
-    }
-    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        if ((webView.url?.absoluteString.contains("google")) != nil) {
-            webView.isHidden = true 
+        
+        if tokenString != ""{
+            if ((webView.url!.absoluteString.contains(tokenString))) {
+                print(tokenString)
+                webView.isHidden = true
+
+            }
         }
         
-//        if isFirstLogin {
-//            if iterator > 0 {
-//                if ((webView.url?.absoluteString.contains("google")) != nil) {
-////                    if !tokenString.isEmpty {
-//                                        webView.isHidden = true
-//                                        isFirstLogin = false
-//                    //                }
-//                }
-////
-//
-//            }
-//            iterator += 1
-//
-//        } else {
-//            webView.isHidden = true
-//
-//        }
-            
-
-//        }
-//        if iterator > 0 {
-//            isFirstLogin = false
-//            webView.isHidden = true
-//
-//        }
-//        iterator += 1
 
     }
     
@@ -231,7 +258,7 @@ class WebViewNavDelegate: NSObject, WKNavigationDelegate, ObservableObject {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
 

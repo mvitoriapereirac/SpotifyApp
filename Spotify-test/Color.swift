@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 extension UIColor {
     static let RGBRed = UIColor(red: 255.0, green: 0.0, blue: 0.0, alpha: 1.0)
     static let RGBGreen = UIColor(red: 0.0, green: 255.0, blue: 0.0, alpha: 1.0)
@@ -44,4 +45,9 @@ extension UIColor {
         return colorMix
 //        return UIColor(red: l1*r1 + l2*r2, green: l1*g1 + l2*g2, blue: l1*b1 + l2*b2, alpha: l1*a1 + l2*a2)
     }
+}
+
+extension Color {
+   static let projectBlack = Color("projectBlack")
+    static let projectWhite = Color("projectWhite")
 }
