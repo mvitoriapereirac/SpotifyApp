@@ -23,7 +23,7 @@ struct ResultsView: View {
     let dayInfo: FetchedResults<DayInfo>.Element?
     @State private var userInput = ""
     @FocusState var textFieldIsFocused: Bool
-    
+    @ObservedObject var savedImg = SavedImage.shared
     
     var currentPercentage: [Double] {
         if let currentValues = dayInfo?.current as? [Double] {
@@ -40,12 +40,15 @@ struct ResultsView: View {
         return UIColor()
     }
     
-//    var chosenPic: UIImage {
-//        if let currentPic = dayInfo?.chosenPic as? UIImage {
-//            return currentPic
-//        }
-//        return UIImage()
-//    }
+    var chosenPic: UIImage {
+        if let uiImage = UIImage(data: (dayInfo?.chosenPic) ?? Data()) {
+            return uiImage
+        }
+        if let currentPic = dayInfo?.chosenPic as? UIImage {
+            return currentPic
+        }
+        return UIImage()
+    }
     
     
     init(viewModel: ResultsViewModel = ResultsViewModel(genres: [[]], genresAmountDict: [:], current: []), isFirstVisitToday: Bool, dayFromSelected: Int? = nil, monthFromSelected: Int? = nil, weekdayFromSelected: Int? = nil, colorFromSelected: UIColor? = nil, dayInfo: FetchedResults<DayInfo>.Element? = nil) {
@@ -181,8 +184,11 @@ struct ResultsView: View {
                                             if isFirstVisitToday {
                                                 EditableCircularProfileImage(photosManager: photosManager, color: isFirstVisitToday ? viewModel.makeUIColorBlend() : chosenColor)
                                             } else {
-//                                                Image(uiImage: chosenPic)
-//                                                    .frame(width: 300, height: 400)
+                                                Image(uiImage: chosenPic)
+                                                    .resizable()
+                                                    .scaledToFill()
+                                                    .frame(width: 300, height: 400)
+                                                    .cornerRadius(25)
                                             }
                                             Spacer()
                                             
@@ -214,7 +220,7 @@ struct ResultsView: View {
                                                     
                                                     let dayInfo = DayInfo(context: moc)
                                                     dayInfo.dayMessage = self.userInput
-//                                                    dayInfo.chosenPic = photosManager.imageSelection as Data
+                                                    dayInfo.chosenPic = savedImg.convertUIImageToDataType()
                                                     dayInfo.weekday = Int16(viewModel.weekday)
                                                     dayInfo.color = viewModel.makeUIColorBlend()
                                                     dayInfo.day = Int16(viewModel.day)

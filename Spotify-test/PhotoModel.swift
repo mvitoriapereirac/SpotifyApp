@@ -43,6 +43,9 @@ class PhotoModel: ObservableObject {
                     throw TransferError.importFailed
                 }
                 let image = Image(uiImage: uiImage)
+                DispatchQueue.main.async {
+                    SavedImage.shared.inputImage = uiImage
+                }
                 return PhotoImage(image: image)
             #else
                 throw TransferError.importFailed
@@ -76,6 +79,7 @@ class PhotoModel: ObservableObject {
                 switch result {
                 case .success(let profileImage?):
                     self.imageState = .success(profileImage.image)
+                    
                 case .success(nil):
                     self.imageState = .empty
                 case .failure(let error):

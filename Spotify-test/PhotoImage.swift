@@ -10,6 +10,10 @@ import SwiftUI
 import PhotosUI
 
 struct PhotoImage: View {
+    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
+    @Environment(\.managedObjectContext) var moc
+    
+    
     let imageState: PhotoModel.ImageState
     let color: UIColor
 
@@ -18,6 +22,12 @@ struct PhotoImage: View {
         case .success(let image):
             image.resizable().scaledToFill()
                 .frame(width: 300, height: 400)
+                .onAppear {
+//                    let uiImg = UIImage(image)
+//                    SavedImage.shared.inputImage = uiImg
+        
+
+                }
 
         case .loading:
             ProgressView()

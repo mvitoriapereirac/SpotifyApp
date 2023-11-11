@@ -994,8 +994,8 @@
             filePath = "Spotify-test/ResultsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1120,8 +1120,8 @@
             filePath = "Spotify-test/ResultsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1629,8 +1629,8 @@
             filePath = "Spotify-test/ResultsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1701,7 +1701,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "34907C75-DD6C-4CEF-8718-76F003D7F829"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spotify-test/PhotoModel.swift"
@@ -1711,6 +1711,86 @@
             endingLineNumber = "33"
             landmarkName = "transferRepresentation"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFD8CA89-80F0-4126-98C3-EAAB43979CF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/ResultsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "chosenPic"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E9418E0-D0A6-4353-B25D-F853B5F75628"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/ResultsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "chosenPic"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0A8E1F4-965F-4C1E-9172-33A2566C5DB8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/SavedImage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "convertUIImageToDataType()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0A8E1F4-965F-4C1E-9172-33A2566C5DB8 - 5869f5cb45b8bc11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.SavedImage.convertUIImageToDataType() -&gt; Swift.Optional&lt;Foundation.Data&gt;"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/SavedImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "B0A8E1F4-965F-4C1E-9172-33A2566C5DB8 - 5869f5cb45b8bc11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.SavedImage.convertUIImageToDataType() -&gt; Swift.Optional&lt;Foundation.Data&gt;"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/SavedImage.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
