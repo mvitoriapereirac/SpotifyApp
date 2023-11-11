@@ -16,7 +16,10 @@
 		BC55089E2AC5F713005817BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC55089D2AC5F713005817BD /* Preview Assets.xcassets */; };
 		BC60DE402AFD755800DD2DD8 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60DE3F2AFD755800DD2DD8 /* KeyboardModifier.swift */; };
 		BC60DE422AFDC6BC00DD2DD8 /* DailyStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60DE412AFDC6BC00DD2DD8 /* DailyStats.swift */; };
-		BC61DF412AF183BB0035B24A /* DayInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF3F2AF183BB0035B24A /* DayInfo.xcdatamodeld */; };
+		BC60DE442AFED95500DD2DD8 /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60DE432AFED95500DD2DD8 /* UIImageTransformer.swift */; };
+		BC60DE462AFFA1EF00DD2DD8 /* EntityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60DE452AFFA1EF00DD2DD8 /* EntityExtension.swift */; };
+		BC60DE492AFFA80700DD2DD8 /* DayInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC60DE472AFFA80700DD2DD8 /* DayInfo.xcdatamodeld */; };
+		BC61DF412AF183BB0035B24A /* DayInfo1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF3F2AF183BB0035B24A /* DayInfo1.xcdatamodeld */; };
 		BC61DF432AF187FB0035B24A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF422AF187FB0035B24A /* DataController.swift */; };
 		BC61DF452AF19D7B0035B24A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF442AF19D7B0035B24A /* Coordinator.swift */; };
 		BC61DF472AF19E560035B24A /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF462AF19E560035B24A /* AppNavigation.swift */; };
@@ -44,6 +47,9 @@
 		BC55089D2AC5F713005817BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC60DE3F2AFD755800DD2DD8 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		BC60DE412AFDC6BC00DD2DD8 /* DailyStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStats.swift; sourceTree = "<group>"; };
+		BC60DE432AFED95500DD2DD8 /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		BC60DE452AFFA1EF00DD2DD8 /* EntityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityExtension.swift; sourceTree = "<group>"; };
+		BC60DE482AFFA80700DD2DD8 /* DayInfo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DayInfo.xcdatamodel; sourceTree = "<group>"; };
 		BC61DF402AF183BB0035B24A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BC61DF422AF187FB0035B24A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BC61DF442AF19D7B0035B24A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -91,12 +97,15 @@
 		BC5508952AC5F712005817BD /* Spotify-test */ = {
 			isa = PBXGroup;
 			children = (
+				BC60DE432AFED95500DD2DD8 /* UIImageTransformer.swift */,
 				BC9254D52AFD26910028DE45 /* PhotoImage.swift */,
 				BC9254D72AFD3B5B0028DE45 /* PhotoModel.swift */,
 				BC5508962AC5F712005817BD /* Spotify_testApp.swift */,
 				BCF590B62AED6B100037E6C1 /* Rectangle.swift */,
 				BCF590B22AED63DD0037E6C1 /* GridView.swift */,
-				BC61DF3F2AF183BB0035B24A /* DayInfo.xcdatamodeld */,
+				BC61DF3F2AF183BB0035B24A /* DayInfo1.xcdatamodeld */,
+				BC60DE472AFFA80700DD2DD8 /* DayInfo.xcdatamodeld */,
+				BC60DE452AFFA1EF00DD2DD8 /* EntityExtension.swift */,
 				BC61DF422AF187FB0035B24A /* DataController.swift */,
 				BC60DE3F2AFD755800DD2DD8 /* KeyboardModifier.swift */,
 				BC152B882AE862BA0047DDBB /* Color.swift */,
@@ -203,9 +212,11 @@
 				BC61DF472AF19E560035B24A /* AppNavigation.swift in Sources */,
 				BCE9A1BE2ADF63F7001D6564 /* APIService.swift in Sources */,
 				BCFF30462AFC5DC80063AF61 /* FlowerAnimation.swift in Sources */,
+				BC60DE442AFED95500DD2DD8 /* UIImageTransformer.swift in Sources */,
 				BCE9A1BC2ADF6360001D6564 /* NetworkError.swift in Sources */,
 				BC5508972AC5F712005817BD /* Spotify_testApp.swift in Sources */,
 				BCF590B72AED6B100037E6C1 /* Rectangle.swift in Sources */,
+				BC60DE462AFFA1EF00DD2DD8 /* EntityExtension.swift in Sources */,
 				BCF2B7252AF2B89300872372 /* DailyLogManager.swift in Sources */,
 				BC1A614D2B03AABA00554997 /* MoodCaption.swift in Sources */,
 				BCE9A1BA2ADF5F92001D6564 /* APIConstants.swift in Sources */,
@@ -213,12 +224,13 @@
 				BC9254D82AFD3B5B0028DE45 /* PhotoModel.swift in Sources */,
 				BC152B892AE862BA0047DDBB /* Color.swift in Sources */,
 				BC61DF452AF19D7B0035B24A /* Coordinator.swift in Sources */,
-				BC61DF412AF183BB0035B24A /* DayInfo.xcdatamodeld in Sources */,
+				BC61DF412AF183BB0035B24A /* DayInfo1.xcdatamodeld in Sources */,
 				BC60DE422AFDC6BC00DD2DD8 /* DailyStats.swift in Sources */,
 				BC9254D62AFD26910028DE45 /* PhotoImage.swift in Sources */,
 				BCFF30442AFBE05B0063AF61 /* StringProtocol.swift in Sources */,
 				BC60DE402AFD755800DD2DD8 /* KeyboardModifier.swift in Sources */,
 				BC152B8B2AE887670047DDBB /* ResultsViewModel.swift in Sources */,
+				BC60DE492AFFA80700DD2DD8 /* DayInfo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,13 +435,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BC61DF3F2AF183BB0035B24A /* DayInfo.xcdatamodeld */ = {
+		BC60DE472AFFA80700DD2DD8 /* DayInfo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC60DE482AFFA80700DD2DD8 /* DayInfo.xcdatamodel */,
+			);
+			currentVersion = BC60DE482AFFA80700DD2DD8 /* DayInfo.xcdatamodel */;
+			path = DayInfo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		BC61DF3F2AF183BB0035B24A /* DayInfo1.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				BC61DF402AF183BB0035B24A /* Model.xcdatamodel */,
 			);
 			currentVersion = BC61DF402AF183BB0035B24A /* Model.xcdatamodel */;
-			path = DayInfo.xcdatamodeld;
+			path = DayInfo1.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

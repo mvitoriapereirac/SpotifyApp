@@ -11,6 +11,7 @@ import Photos
 import PhotosUI
 
 struct ResultsView: View {
+    private var context = DataController.shared.container.viewContext
     @ObservedObject private var viewModel = ResultsViewModel(genres: [[]], genresAmountDict: [:], current: [])
     @EnvironmentObject var coordinator: Coordinator
     let isFirstVisitToday: Bool
@@ -20,10 +21,13 @@ struct ResultsView: View {
     let monthFromSelected: Int?
     let weekdayFromSelected: Int?
     let colorFromSelected: UIColor?
-    let dayInfo: FetchedResults<DayInfo>.Element?
+    let dayInfo: FetchedResults<DayInfoExtension>.Element?
     @State private var userInput = ""
     @FocusState var textFieldIsFocused: Bool
-    
+    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfoExtension>
+    @Environment(\.managedObjectContext) var moc
+    @State var showGrid = false
+    @StateObject var photosManager = PhotoModel()
     
     var currentPercentage: [Double] {
         if let currentValues = dayInfo?.current as? [Double] {
@@ -48,7 +52,7 @@ struct ResultsView: View {
 //    }
     
     
-    init(viewModel: ResultsViewModel = ResultsViewModel(genres: [[]], genresAmountDict: [:], current: []), isFirstVisitToday: Bool, dayFromSelected: Int? = nil, monthFromSelected: Int? = nil, weekdayFromSelected: Int? = nil, colorFromSelected: UIColor? = nil, dayInfo: FetchedResults<DayInfo>.Element? = nil) {
+    init(viewModel: ResultsViewModel = ResultsViewModel(genres: [[]], genresAmountDict: [:], current: []), isFirstVisitToday: Bool, dayFromSelected: Int? = nil, monthFromSelected: Int? = nil, weekdayFromSelected: Int? = nil, colorFromSelected: UIColor? = nil, dayInfo: FetchedResults<DayInfoExtension>.Element? = nil) {
         self.viewModel = viewModel
         self.isFirstVisitToday = isFirstVisitToday
         self.dayFromSelected = dayFromSelected
@@ -58,10 +62,7 @@ struct ResultsView: View {
         self.dayInfo = dayInfo
     }
     
-    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
-    @Environment(\.managedObjectContext) var moc
-    @State var showGrid = false
-    @StateObject var photosManager = PhotoModel()
+    
     
     
     var body: some View {
@@ -201,18 +202,19 @@ struct ResultsView: View {
                                                         print(logManager.daysOfAbsence.count)
                                                         
                                                         for _ in logManager.daysOfAbsence {
-                                                            let dayInfo = DayInfo(context: moc)
+                                                            let dayInfo = DayInfoExtension(context: context)
                                                             //                        dayInfo.weekday = Int16(viewModel.weekday)
                                                             //                        dayInfo.day = Int16(viewModel.day)
                                                             //                        dayInfo.month = Int16(viewModel.month)
                                                             
                                                             dayInfo.color = UIColor.clear
-                                                            try? moc.save()
+//                                                            try? moc.save()
+                                                            try? context.save()
                                                             
                                                         }
                                                     }
                                                     
-                                                    let dayInfo = DayInfo(context: moc)
+                                                    let dayInfo = DayInfoExtension(context: context)
                                                     dayInfo.dayMessage = self.userInput
 //                                                    dayInfo.chosenPic = photosManager.imageSelection as Data
                                                     dayInfo.weekday = Int16(viewModel.weekday)
@@ -220,7 +222,8 @@ struct ResultsView: View {
                                                     dayInfo.day = Int16(viewModel.day)
                                                     dayInfo.month = Int16(viewModel.month)
                                                     dayInfo.current = viewModel.current as NSObject
-                                                    try? moc.save()
+//                                                    try? moc.save()
+                                                    try? context.save()
                                                 }
 
                                                 coordinator.goToGridView()

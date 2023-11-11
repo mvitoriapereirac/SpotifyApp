@@ -28,7 +28,7 @@ class ResultsViewModel: ObservableObject {
     let weekDays = ["Dom": 1, "Seg": 2, "Ter": 3, "Qua": 4, "Qui": 5, "Sex": 6, "Sab": 7]
 
     
-    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
+    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfoExtension>
     @Environment(\.managedObjectContext) var moc
 
     var bright: Mood {

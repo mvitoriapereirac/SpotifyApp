@@ -13,7 +13,7 @@ struct RectangleView: View {
     @EnvironmentObject var coordinator: Coordinator
     let RectColor: UIColor
     let frame: CGFloat
-    let dayInfo: FetchedResults<DayInfo>.Element? = nil
+    let dayInfo: FetchedResults<DayInfoExtension>.Element? = nil
     var body: some View {
         ZStack {
             Rectangle()

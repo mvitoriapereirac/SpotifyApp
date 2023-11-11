@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 
 struct GridView: View {
-    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
+    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfoExtension>
     @EnvironmentObject var coordinator: Coordinator
     @ObservedObject var viewModel = GridViewModel.shared
-    
+    private var context = DataController.shared.container.viewContext
+
     
     let columns = [
         GridItem(.flexible()),
@@ -113,7 +114,7 @@ struct GridView: View {
                                                     viewModel.dayFromSelected = Int(dayInfo.day)
                                                     viewModel.monthFromSelected = Int(dayInfo.month)
                                                     viewModel.weekdayFromSelected = Int(dayInfo.weekday)
-                                                    viewModel.dayInfo = dayInfo
+//                                                    viewModel.dayInfo = dayInfo
                                                     coordinator.goToResultsView()
                     
                                                     }
@@ -144,7 +145,7 @@ class GridViewModel: ObservableObject {
     @Published var monthFromSelected: Int? = 0
     @Published var weekdayFromSelected: Int? = 0
     @Published var colorFromSelected: UIColor? = UIColor.clear
-    @Published var dayInfo: FetchedResults<DayInfo>.Element? = nil
+    @Published var dayInfo: FetchedResults<DayInfoExtension>.Element? = nil
     
     
     

@@ -13,8 +13,8 @@ struct HomeView: View {
     
 
     @EnvironmentObject var coordinator: Coordinator
-    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
-    @Environment(\.managedObjectContext) var moc
+//    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
+//    @Environment(\.managedObjectContext) var moc
     @State private var songs: [String] = []
     let artist = "a"
     @State private var enableButton = false

@@ -10,14 +10,20 @@ import SwiftUI
 import PhotosUI
 
 struct PhotoImage: View {
+//        @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
+
     let imageState: PhotoModel.ImageState
     let color: UIColor
+    @Environment(\.managedObjectContext) var moc
+
 
     var body: some View {
         switch imageState {
         case .success(let image):
             image.resizable().scaledToFill()
                 .frame(width: 300, height: 400)
+//            let dayInfo = DayInfo(context: moc)
+//            dayInfo.chosenImg = imag
 
         case .loading:
             ProgressView()
