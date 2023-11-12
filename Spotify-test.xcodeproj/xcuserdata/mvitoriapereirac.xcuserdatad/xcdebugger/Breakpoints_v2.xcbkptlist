@@ -173,8 +173,8 @@
             filePath = "Spotify-test/Color.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "blend(color1:intensity1:color2:intensity2:color3:intensity3:color4:intensity4:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1177,70 +1177,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "666D158B-C044-4E3F-9031-7698365B0282"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "WebViewNavDelegate"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "030159AB-D084-4207-A560-29D805655BF6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/HomeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "WebViewNavDelegate"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "030159AB-D084-4207-A560-29D805655BF6 - 39d6952054d68ce1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didFinish: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "188"
-                  endingLineNumber = "188"
-                  offsetFromSymbolStart = "1308">
-               </Location>
-               <Location
-                  uuid = "030159AB-D084-4207-A560-29D805655BF6 - 39d6952054d68ca3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Spotify_test.WebViewNavDelegate.webView(_: __C.WKWebView, didFinish: Swift.Optional&lt;__C.WKNavigation&gt;) -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/HomeView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "190"
-                  endingLineNumber = "190"
-                  offsetFromSymbolStart = "1164">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "808F6CDE-684C-46AA-BB74-C5351507A7D3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1248,8 +1184,8 @@
             filePath = "Spotify-test/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "webView(_:didCommit:)"
             landmarkType = "7">
             <Locations>
@@ -1296,8 +1232,8 @@
             filePath = "Spotify-test/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "webView(_:didCommit:)"
             landmarkType = "7">
             <Locations>
@@ -1749,7 +1685,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B0A8E1F4-965F-4C1E-9172-33A2566C5DB8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Spotify-test/SavedImage.swift"

@@ -19,5 +19,11 @@ class SavedImage: ObservableObject {
 
     }
     
+    func convertDataToUIImageType(data: Data?) -> UIImage? {
+        let uiImage = UIImage(data: data ?? Data())
+        return uiImage
+        
+    }
+    
     
 }

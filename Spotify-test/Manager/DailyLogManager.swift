@@ -27,7 +27,7 @@ class DailyLogManager: NSObject, ObservableObject {
         }
     }
 
-    private func isRefreshRequired(userPickedHour: Int = 12) -> Bool {
+    private func isRefreshRequired(userPickedHour: Int = 18) -> Bool {
 
         guard let lastRefreshDate = defaults.object(forKey: defaultsKey) as? Date else {
             shouldRefresh = true

@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class DataController: ObservableObject {
+class DataManager: ObservableObject {
     let container = NSPersistentContainer(name: "DayInfo")
     
     init() {

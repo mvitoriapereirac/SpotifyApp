@@ -10,7 +10,12 @@
 		BC152B892AE862BA0047DDBB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC152B882AE862BA0047DDBB /* Color.swift */; };
 		BC152B8B2AE887670047DDBB /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC152B8A2AE887670047DDBB /* ResultsViewModel.swift */; };
 		BC1A614D2B03AABA00554997 /* MoodCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A614C2B03AABA00554997 /* MoodCaption.swift */; };
-		BC2108672AFFEF3D00ECFE25 /* SavedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2108662AFFEF3D00ECFE25 /* SavedImage.swift */; };
+		BC2108672AFFEF3D00ECFE25 /* SavedImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2108662AFFEF3D00ECFE25 /* SavedImageManager.swift */; };
+		BC21086E2B0052F300ECFE25 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21086D2B0052F300ECFE25 /* GridViewModel.swift */; };
+		BC2108702B00537F00ECFE25 /* LastListenedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21086F2B00537F00ECFE25 /* LastListenedModel.swift */; };
+		BC2108722B00547200ECFE25 /* GenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2108712B00547200ECFE25 /* GenresModel.swift */; };
+		BC2108752B005CA400ECFE25 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2108742B005CA400ECFE25 /* WebView.swift */; };
+		BC2108772B005CE700ECFE25 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2108762B005CE700ECFE25 /* Delegate.swift */; };
 		BC5508972AC5F712005817BD /* Spotify_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5508962AC5F712005817BD /* Spotify_testApp.swift */; };
 		BC5508992AC5F712005817BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5508982AC5F712005817BD /* HomeView.swift */; };
 		BC55089B2AC5F713005817BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC55089A2AC5F713005817BD /* Assets.xcassets */; };
@@ -18,7 +23,7 @@
 		BC60DE402AFD755800DD2DD8 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60DE3F2AFD755800DD2DD8 /* KeyboardModifier.swift */; };
 		BC60DE422AFDC6BC00DD2DD8 /* DailyStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60DE412AFDC6BC00DD2DD8 /* DailyStats.swift */; };
 		BC61DF412AF183BB0035B24A /* DayInfo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF3F2AF183BB0035B24A /* DayInfo.xcdatamodeld */; };
-		BC61DF432AF187FB0035B24A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF422AF187FB0035B24A /* DataController.swift */; };
+		BC61DF432AF187FB0035B24A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF422AF187FB0035B24A /* DataManager.swift */; };
 		BC61DF452AF19D7B0035B24A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF442AF19D7B0035B24A /* Coordinator.swift */; };
 		BC61DF472AF19E560035B24A /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF462AF19E560035B24A /* AppNavigation.swift */; };
 		BC9254D62AFD26910028DE45 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9254D52AFD26910028DE45 /* PhotoImage.swift */; };
@@ -38,7 +43,12 @@
 		BC152B882AE862BA0047DDBB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		BC152B8A2AE887670047DDBB /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		BC1A614C2B03AABA00554997 /* MoodCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCaption.swift; sourceTree = "<group>"; };
-		BC2108662AFFEF3D00ECFE25 /* SavedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImage.swift; sourceTree = "<group>"; };
+		BC2108662AFFEF3D00ECFE25 /* SavedImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImageManager.swift; sourceTree = "<group>"; };
+		BC21086D2B0052F300ECFE25 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
+		BC21086F2B00537F00ECFE25 /* LastListenedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastListenedModel.swift; sourceTree = "<group>"; };
+		BC2108712B00547200ECFE25 /* GenresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresModel.swift; sourceTree = "<group>"; };
+		BC2108742B005CA400ECFE25 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		BC2108762B005CE700ECFE25 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		BC5508932AC5F712005817BD /* Spotify-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5508962AC5F712005817BD /* Spotify_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_testApp.swift; sourceTree = "<group>"; };
 		BC5508982AC5F712005817BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -47,7 +57,7 @@
 		BC60DE3F2AFD755800DD2DD8 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		BC60DE412AFDC6BC00DD2DD8 /* DailyStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStats.swift; sourceTree = "<group>"; };
 		BC61DF402AF183BB0035B24A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		BC61DF422AF187FB0035B24A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		BC61DF422AF187FB0035B24A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BC61DF442AF19D7B0035B24A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BC61DF462AF19E560035B24A /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		BC9254D52AFD26910028DE45 /* PhotoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
@@ -74,6 +84,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC2108682B00513700ECFE25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCF590B42AED6A4E0037E6C1 /* ResultsView.swift */,
+				BCF590B22AED63DD0037E6C1 /* GridView.swift */,
+				BC5508982AC5F712005817BD /* HomeView.swift */,
+				BC21086B2B00517800ECFE25 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC2108692B00514800ECFE25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC61DF3F2AF183BB0035B24A /* DayInfo.xcdatamodeld */,
+				BC9254D72AFD3B5B0028DE45 /* PhotoModel.swift */,
+				BCE9A1BD2ADF63F7001D6564 /* APIService.swift */,
+				BC21086F2B00537F00ECFE25 /* LastListenedModel.swift */,
+				BC2108712B00547200ECFE25 /* GenresModel.swift */,
+				BCE9A1B92ADF5F92001D6564 /* APIConstants.swift */,
+				BCE9A1BB2ADF6360001D6564 /* NetworkError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC21086A2B00515300ECFE25 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC21086D2B0052F300ECFE25 /* GridViewModel.swift */,
+				BC152B8A2AE887670047DDBB /* ResultsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC21086B2B00517800ECFE25 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BCFF30452AFC5DC80063AF61 /* FlowerAnimation.swift */,
+				BC1A614C2B03AABA00554997 /* MoodCaption.swift */,
+				BC9254D52AFD26910028DE45 /* PhotoImage.swift */,
+				BC60DE412AFDC6BC00DD2DD8 /* DailyStats.swift */,
+				BCF590B62AED6B100037E6C1 /* Rectangle.swift */,
+				BC2108782B005D1E00ECFE25 /* WebView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BC21086C2B0051C100ECFE25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BC60DE3F2AFD755800DD2DD8 /* KeyboardModifier.swift */,
+				BCFF30432AFBE05B0063AF61 /* StringProtocol.swift */,
+				BC152B882AE862BA0047DDBB /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC2108732B00569100ECFE25 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BC2108662AFFEF3D00ECFE25 /* SavedImageManager.swift */,
+				BC61DF422AF187FB0035B24A /* DataManager.swift */,
+				BCF2B7242AF2B89300872372 /* DailyLogManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		BC2108782B005D1E00ECFE25 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				BC2108742B005CA400ECFE25 /* WebView.swift */,
+				BC2108762B005CE700ECFE25 /* Delegate.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		BC2108792B005D5100ECFE25 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BC61DF442AF19D7B0035B24A /* Coordinator.swift */,
+				BC61DF462AF19E560035B24A /* AppNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		BC55088A2AC5F712005817BD = {
 			isa = PBXGroup;
 			children = (
@@ -93,31 +188,15 @@
 		BC5508952AC5F712005817BD /* Spotify-test */ = {
 			isa = PBXGroup;
 			children = (
-				BC9254D52AFD26910028DE45 /* PhotoImage.swift */,
-				BC2108662AFFEF3D00ECFE25 /* SavedImage.swift */,
-				BC9254D72AFD3B5B0028DE45 /* PhotoModel.swift */,
 				BC5508962AC5F712005817BD /* Spotify_testApp.swift */,
-				BCF590B62AED6B100037E6C1 /* Rectangle.swift */,
-				BCF590B22AED63DD0037E6C1 /* GridView.swift */,
-				BC61DF3F2AF183BB0035B24A /* DayInfo.xcdatamodeld */,
-				BC61DF422AF187FB0035B24A /* DataController.swift */,
-				BC60DE3F2AFD755800DD2DD8 /* KeyboardModifier.swift */,
-				BC152B882AE862BA0047DDBB /* Color.swift */,
-				BCFF30432AFBE05B0063AF61 /* StringProtocol.swift */,
-				BCE9A1B92ADF5F92001D6564 /* APIConstants.swift */,
-				BC5508982AC5F712005817BD /* HomeView.swift */,
-				BCF2B7242AF2B89300872372 /* DailyLogManager.swift */,
-				BC61DF442AF19D7B0035B24A /* Coordinator.swift */,
-				BC61DF462AF19E560035B24A /* AppNavigation.swift */,
+				BC2108682B00513700ECFE25 /* View */,
+				BC2108692B00514800ECFE25 /* Model */,
+				BC21086A2B00515300ECFE25 /* ViewModel */,
+				BC21086C2B0051C100ECFE25 /* Extensions */,
+				BC2108732B00569100ECFE25 /* Manager */,
+				BC2108792B005D5100ECFE25 /* Navigation */,
 				BC55089A2AC5F713005817BD /* Assets.xcassets */,
 				BC55089C2AC5F713005817BD /* Preview Content */,
-				BCE9A1BB2ADF6360001D6564 /* NetworkError.swift */,
-				BCE9A1BD2ADF63F7001D6564 /* APIService.swift */,
-				BCF590B42AED6A4E0037E6C1 /* ResultsView.swift */,
-				BC60DE412AFDC6BC00DD2DD8 /* DailyStats.swift */,
-				BCFF30452AFC5DC80063AF61 /* FlowerAnimation.swift */,
-				BC152B8A2AE887670047DDBB /* ResultsViewModel.swift */,
-				BC1A614C2B03AABA00554997 /* MoodCaption.swift */,
 			);
 			path = "Spotify-test";
 			sourceTree = "<group>";
@@ -200,12 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC21086E2B0052F300ECFE25 /* GridViewModel.swift in Sources */,
 				BCF590B52AED6A4E0037E6C1 /* ResultsView.swift in Sources */,
-				BC61DF432AF187FB0035B24A /* DataController.swift in Sources */,
+				BC61DF432AF187FB0035B24A /* DataManager.swift in Sources */,
 				BC5508992AC5F712005817BD /* HomeView.swift in Sources */,
 				BC61DF472AF19E560035B24A /* AppNavigation.swift in Sources */,
 				BCE9A1BE2ADF63F7001D6564 /* APIService.swift in Sources */,
 				BCFF30462AFC5DC80063AF61 /* FlowerAnimation.swift in Sources */,
+				BC2108702B00537F00ECFE25 /* LastListenedModel.swift in Sources */,
 				BCE9A1BC2ADF6360001D6564 /* NetworkError.swift in Sources */,
 				BC5508972AC5F712005817BD /* Spotify_testApp.swift in Sources */,
 				BCF590B72AED6B100037E6C1 /* Rectangle.swift in Sources */,
@@ -215,12 +296,15 @@
 				BCF590B32AED63DD0037E6C1 /* GridView.swift in Sources */,
 				BC9254D82AFD3B5B0028DE45 /* PhotoModel.swift in Sources */,
 				BC152B892AE862BA0047DDBB /* Color.swift in Sources */,
+				BC2108722B00547200ECFE25 /* GenresModel.swift in Sources */,
 				BC61DF452AF19D7B0035B24A /* Coordinator.swift in Sources */,
 				BC61DF412AF183BB0035B24A /* DayInfo.xcdatamodeld in Sources */,
 				BC60DE422AFDC6BC00DD2DD8 /* DailyStats.swift in Sources */,
-				BC2108672AFFEF3D00ECFE25 /* SavedImage.swift in Sources */,
+				BC2108672AFFEF3D00ECFE25 /* SavedImageManager.swift in Sources */,
 				BC9254D62AFD26910028DE45 /* PhotoImage.swift in Sources */,
 				BCFF30442AFBE05B0063AF61 /* StringProtocol.swift in Sources */,
+				BC2108772B005CE700ECFE25 /* Delegate.swift in Sources */,
+				BC2108752B005CA400ECFE25 /* WebView.swift in Sources */,
 				BC60DE402AFD755800DD2DD8 /* KeyboardModifier.swift in Sources */,
 				BC152B8B2AE887670047DDBB /* ResultsViewModel.swift in Sources */,
 			);

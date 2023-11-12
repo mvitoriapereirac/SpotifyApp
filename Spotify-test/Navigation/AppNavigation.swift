@@ -16,9 +16,8 @@ struct AppNavigation: View {
                 selectedScreen
             }
             .environmentObject(coordinator)
-            //            .navigationTransition(.fade(.cross))}
         } else {
-                // Fallback on earlier versions
+                // TO DO: Fallback on earlier versions
             }
         }
         

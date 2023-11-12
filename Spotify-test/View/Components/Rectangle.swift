@@ -20,13 +20,6 @@ struct RectangleView: View {
                 .frame(width: frame, height: frame)
                 .foregroundColor(Color(RectColor))
 
-//                .foregroundColor(Color(viewModel.makeUIColorBlend()))
-                
-//                .onTapGesture {
-//                    coordinator.goToResultsView()
-//                    
-//                    
-//                }
         }
        
     }

@@ -74,7 +74,7 @@ struct GridView: View {
                     
                                         ForEach(daysInfo, id: \.self) { dayInfo in
                                             if dayInfo == daysInfo.first {
-                                                ForEach(0...6, id: \.self) { index in
+                                                ForEach(1...7, id: \.self) { index in
                     
                                                     if daysInfo.first?.weekday ?? 0 == index {
                     
@@ -108,26 +108,14 @@ struct GridView: View {
                                             }
                     
                                             RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
-                                                .onTapGesture {
-                                                    viewModel.colorFromSelected = dayInfo.color as? UIColor
-                                                    viewModel.dayFromSelected = Int(dayInfo.day)
-                                                    viewModel.monthFromSelected = Int(dayInfo.month)
-                                                    viewModel.weekdayFromSelected = Int(dayInfo.weekday)
+                                                .onTapGesture {                                                    
                                                     viewModel.dayInfo = dayInfo
                                                     coordinator.goToResultsView()
                     
                                                     }
-                    
-                    
-                    
-                    
-                    
-                    
+
                                         }
                     
-                }
-                .onAppear{
-                    print("aqui \(daysInfo)")
                 }
                 .padding()
             }
@@ -137,24 +125,6 @@ struct GridView: View {
     }
 }
 
-class GridViewModel: ObservableObject {
-    
-    static let shared = GridViewModel()
-    @Published var dayFromSelected: Int? = 0
-    @Published var monthFromSelected: Int? = 0
-    @Published var weekdayFromSelected: Int? = 0
-    @Published var colorFromSelected: UIColor? = UIColor.clear
-    @Published var dayInfo: FetchedResults<DayInfo>.Element? = nil
-    
-    
-    
-    //TO DO: implement this method on a details manager
-    func makeDetailedResultsView() -> ResultsView {
-        return ResultsView(isFirstVisitToday: false, dayFromSelected: self.dayFromSelected, monthFromSelected: self.monthFromSelected, weekdayFromSelected: self.weekdayFromSelected, colorFromSelected: self.colorFromSelected, dayInfo: self.dayInfo)
-        
-        
-    }
-}
 
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {

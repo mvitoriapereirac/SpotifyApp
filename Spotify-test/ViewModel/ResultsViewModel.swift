@@ -20,7 +20,7 @@ class ResultsViewModel: ObservableObject {
     var total = 0.0
     @Published var current: [Double]
     @Published var currentColor: [ UIColor ] = []
-    @Published var showDetailsView = false
+//    @Published var showDetailsView = false
     @Published var weekday = Calendar.current.component(.weekday, from: Date())
     @Published var day = Calendar.current.component(.day, from: Date())
     @Published var month = Calendar.current.component(.month, from: Date())
