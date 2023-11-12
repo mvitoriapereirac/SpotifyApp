@@ -10,7 +10,7 @@ import SwiftUI
 import Photos
 import PhotosUI
 
-//TO DO: move data storage with Core Data to some other structure more adequate to MVVM  (https://medium.com/@santiagogarciasantos/core-data-and-swiftui-a-solution-c0404a01c1aa)
+//TO DO: move data storage with Core Data to some other structure more adequate to MVVM architecture than a view (https://medium.com/@santiagogarciasantos/core-data-and-swiftui-a-solution-c0404a01c1aa)
 struct ResultsView: View {
     @ObservedObject private var viewModel = ResultsViewModel(genres: [[]], genresAmountDict: [:], current: [])
     @EnvironmentObject var coordinator: Coordinator

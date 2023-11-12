@@ -13,10 +13,10 @@ struct HomeView: View {
     
 
     @EnvironmentObject var coordinator: Coordinator
-//    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
-//    @Environment(\.managedObjectContext) var moc
+
     @State private var enableButton = false
     @State private var showWebView = false
+    @State private var showLoadingPopup = false
     
     @ObservedObject var webViewDelegate = WebViewNavDelegate.shared
     @ObservedObject var dailyLogManager = DailyLogManager.shared
@@ -62,15 +62,36 @@ struct HomeView: View {
                 .padding(.bottom, 36)
                 .frame(width: 200)
             }
-//            .padding(50)
 
-                
-                
-                if showWebView {
-                    ZStack {
-                        WebView()
-                            .ignoresSafeArea(.all)
+                        
+                        
+                        
+                        ZStack {
+                            
+                            if showLoadingPopup {
+                                Color(.black).opacity(0.4).ignoresSafeArea(.all)
+                                VStack {
+                                    LoadingBar()
+                                    Text("Carregando resultados")
+                                        .font(.headline)
+                                        .foregroundColor(.black)
+                                    
+                                }
+                                .padding(.horizontal, 36)
+                                .padding(.vertical, 240)
+                                .background(Color.white.cornerRadius(25))
 
+                            }
+                            
+                            if showWebView {
+                                WebView()
+                                    .ignoresSafeArea(.all)
+                                    .onAppear{
+                                        showLoadingPopup = true
+
+                                    }
+
+                            }
                         
                     }
                     .onChange(of: webViewDelegate.tokenString) { newValue in
@@ -84,6 +105,8 @@ struct HomeView: View {
                                 try await APIService.shared.list = APIService.shared.getRecentlyListened()
                                 try await APIService.shared.genres = APIService.shared.getRecentlyPlayedGenres()
                                 print(APIService.shared.dict)
+                                showWebView = false
+                                showLoadingPopup = false
                                 coordinator.goToTodaysResultsView()
                             }
                             
@@ -94,7 +117,7 @@ struct HomeView: View {
                     
                             
                         
-                }
+//                }
                 
             }
         
