@@ -28,17 +28,22 @@ struct AppNavigation: View {
                     switch route {
                     case .gridView:
                         GridView()
-                        
+                            .navigationBarBackButtonHidden(true)
+
                     case .resultsView:
                         GridViewModel.shared.makeDetailedResultsView()
-                            .navigationBarTitleDisplayMode(.large)
+                            .navigationBarBackButtonHidden(true)
                             
                         
                     case .homeView:
                         HomeView()
+                            .navigationBarBackButtonHidden(true)
+
                         
                     case .todaysResultsView:
                         ResultsView(isFirstVisitToday: true)
+                            .navigationBarBackButtonHidden(true)
+
                     }
                     
                 }

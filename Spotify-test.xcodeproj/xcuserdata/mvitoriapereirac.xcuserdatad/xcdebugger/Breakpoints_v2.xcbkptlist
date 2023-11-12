@@ -1729,5 +1729,69 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D60683FD-998E-44B8-AD6D-E2AA052CCDB8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/Extensions/TexField.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "TextField"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A67BBAE-87AA-4E70-AAA9-23F7254F63AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/View/GridView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6A67BBAE-87AA-4E70-AAA9-23F7254F63AC - 3943baadeee33b3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt; in closure #1 (Spotify_test.DayInfo) -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.FetchedResults&lt;Spotify_test.DayInfo&gt;, Spotify_test.DayInfo, SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #3 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, Spotify_test.MoodCaption, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Spotify_test.GridView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/View/GridView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "2216">
+               </Location>
+               <Location
+                  uuid = "6A67BBAE-87AA-4E70-AAA9-23F7254F63AC - 3943baadeee33b3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt; in closure #1 (Spotify_test.DayInfo) -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.FetchedResults&lt;Spotify_test.DayInfo&gt;, Spotify_test.DayInfo, SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.ClosedRange&lt;Swift.Int&gt;, Swift.Int, Swift.Optional&lt;Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Int&gt;, Swift.Int, Spotify_test.RectangleView&gt;, SwiftUI.TupleView&lt;(Swift.Optional&lt;Spotify_test.RectangleView&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(Spotify_test.RectangleView, Spotify_test.RectangleView)&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #3 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, Spotify_test.MoodCaption, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ScrollView&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Spotify_test.GridView.body.getter : some"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/View/GridView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "2132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -25,6 +25,17 @@ struct GridView: View {
     ]
     var body: some View {
         VStack {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .resizable()
+                    .frame(width: 20, height: 32)
+                    .padding()
+                    .foregroundColor(Color(.purple))
+                    .onTapGesture {
+                        coordinator.goToHomePage()
+                    }
+                Spacer()
+            }
             MoodCaption(color: .projectWhite)
             LazyVGrid(columns: columns) {
                 Text("D")
@@ -78,7 +89,9 @@ struct GridView: View {
                     
                                                     if daysInfo.first?.weekday ?? 0 == index {
                     
-                                                        if index != 0 || index != 1 || index != 2 {
+//                                                        if index != 0 || index != 1 || index != 2 {
+                                                        if index != 0 {
+
                                                             let arrayIterator = Array(1...(index - 1))
                                                             ForEach(arrayIterator, id: \.self) { i in
                                                                 RectangleView(RectColor: .clear, frame: 50)

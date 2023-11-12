@@ -48,9 +48,6 @@ class DailyLogManager: NSObject, ObservableObject {
     private func addBlankDays(diff: Int) {
         if diff > 1 {
             daysOfAbsence = Array(1...(diff - 1))
-            
-            print(daysOfAbsence)
-            
         }
     }
 }

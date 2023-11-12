@@ -43,7 +43,7 @@ struct PhotoImage: View {
     }
 }
 
-struct CircularProfileImage: View {
+struct RoundedRectDayImage: View {
     let imageState: PhotoModel.ImageState
     let color: UIColor
     var body: some View {
@@ -63,14 +63,14 @@ struct CircularProfileImage: View {
     }
 }
 
-struct EditableCircularProfileImage: View {
+struct EditableRoundedRectDayImage: View {
     @ObservedObject var photosManager: PhotoModel
     var color: UIColor
     
     var body: some View {
         
         ZStack {
-            CircularProfileImage(imageState: photosManager.imageState, color: color)
+            RoundedRectDayImage(imageState: photosManager.imageState, color: color)
             PhotosPicker(selection: $photosManager.imageSelection,
                          matching: .images,
                          photoLibrary: .shared()) {

@@ -11,13 +11,15 @@ import Photos
 import PhotosUI
 
 //TO DO: move data storage with Core Data to some other structure more adequate to MVVM architecture than a view (https://medium.com/@santiagogarciasantos/core-data-and-swiftui-a-solution-c0404a01c1aa)
+
+
 struct ResultsView: View {
     @ObservedObject private var viewModel = ResultsViewModel(genres: [[]], genresAmountDict: [:], current: [])
     @EnvironmentObject var coordinator: Coordinator
     let isFirstVisitToday: Bool
     let logManager = DailyLogManager.shared
     let dayInfo: FetchedResults<DayInfo>.Element?
-    @State private var userInput = ""
+    @State private var userInput: String = ""
     @FocusState var textFieldIsFocused: Bool
     @ObservedObject var savedImg = SavedImage.shared
     
@@ -38,8 +40,17 @@ struct ResultsView: View {
     
     var chosenPic: UIImage {
         
-        return SavedImage.shared.convertDataToUIImageType(data: dayInfo?.chosenPic) ?? UIImage()
+        return SavedImage.shared.convertDataToUIImageType(data: dayInfo?.chosenPic) ?? UIImage(named: "placeholder")!
         
+    }
+    
+    var chosenMessage: String {
+        if let message = dayInfo?.dayMessage as? String {
+            if message != ""{
+                return message
+            }
+        }
+        return "São tantas reflexões..."
     }
     
     
@@ -67,7 +78,7 @@ struct ResultsView: View {
                     Color(.white)
                         .opacity(0.9)
                         .cornerRadius(25.0)
-                        .padding(.top, 90)
+                        .padding(.top, 110)
                         .padding(.horizontal, 8)
                     ScrollView {
                         
@@ -81,7 +92,7 @@ struct ResultsView: View {
                                 .font(.subheadline.bold())
                                 .padding(8)
                             
-                            VStack(alignment: .leading) {
+                            VStack(alignment: .leading, spacing: 25) {
                                 
                                 HStack {
                                     
@@ -133,13 +144,14 @@ struct ResultsView: View {
                                     VStack {
                                         
                                         if isFirstVisitToday {
-                                            TextField("", text: $userInput, prompt: Text("Em que pensei enquanto ouvi música hoje?").foregroundColor(.gray), axis: .vertical)
-                                                .textFieldStyle(.roundedBorder)
+                                            TextField("", text: $userInput, prompt: Text("Em que pensei enquanto ouvi música hoje?").foregroundColor(isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor)), axis: .vertical)
+                                                .extensionTextFieldView(roundedCornes: 8, startColor: .clear, endColor: .white, textColor: isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor))
                                                 .foregroundColor(.black)
                                                 .disableAutocorrection(true)
                                                 .padding(.horizontal, 16)
                                                 .focused($textFieldIsFocused)
-                                                .toolbar { // when the axis parameter (enabling multiline text) is added, we lose the ability to dismiss the keyboard. this being the case, adding a "done" button is a user friendly alternative
+                                                .toolbar {
+                                                    // when the axis parameter (enabling multiline text) is added, we lose the ability to dismiss the keyboard. this being the case, adding a "done" button is a user friendly alternative
                                                     ToolbarItemGroup(placement: .keyboard) {
                                                         Spacer()
                                                         Button("Done") {
@@ -149,7 +161,8 @@ struct ResultsView: View {
                                                 }
                                             
                                         } else {
-                                            Text((dayInfo?.dayMessage) ?? "")
+                                            Text(chosenMessage)
+                                                .font(.body.italic())
                                                 .foregroundColor(.black)
                                                 .padding(.horizontal, 16)
                                         }
@@ -165,13 +178,16 @@ struct ResultsView: View {
                                             .foregroundColor(.black)
                                             .frame(width: 30, height: 25)
                                             .padding(.horizontal)
+//                                        Text("Anexe uma foto legal do seu dia!")
+//                                            .foregroundColor(.black)
+//                                            .font(.subheadline.bold())
                                         Spacer()
                                     }
                                     
                                     HStack {
                                         Spacer()
                                         if isFirstVisitToday {
-                                            EditableCircularProfileImage(photosManager: photosManager, color: isFirstVisitToday ? viewModel.makeUIColorBlend() : chosenColor)
+                                            EditableRoundedRectDayImage(photosManager: photosManager, color: isFirstVisitToday ? viewModel.makeUIColorBlend() : chosenColor)
                                         } else {
                                             Image(uiImage: chosenPic)
                                                 .resizable()
@@ -190,10 +206,7 @@ struct ResultsView: View {
                                             if isFirstVisitToday {
                                                 viewModel.genresArray()
                                                 
-                                                print(logManager.daysOfAbsence)
                                                 if logManager.daysOfAbsence.count != 0 {
-                                                    print("michael jackson")
-                                                    print(logManager.daysOfAbsence.count)
                                                     
                                                     for _ in logManager.daysOfAbsence {
                                                         let dayInfo = DayInfo(context: moc)
@@ -213,8 +226,10 @@ struct ResultsView: View {
                                                 dayInfo.current = viewModel.current as NSObject
                                                 try? moc.save()
                                             }
-                                            
-                                            coordinator.goToGridView()
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: { //trying to exhibit the animation of the button
+                                                coordinator.goToGridView()
+
+                                            })
                                         }) {
                                             Text("seus registros")
                                         }
@@ -243,6 +258,8 @@ struct ResultsView: View {
                         .padding(.trailing, 2)
                         
                     }
+                    .padding(.top, 112)
+
                     
                     
                 }

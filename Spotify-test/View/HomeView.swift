@@ -29,26 +29,31 @@ struct HomeView: View {
                     .resizable()
                     .aspectRatio(1.0, contentMode: .fit)
                     .shadow(radius: 18, y: 12)
-                Button(action: {
-//                    dailyLogManager.AllowLogButtonIfNeeded() { success in
-//                        showWebView = success
-//                        print(success)
-//                    }
-//                    if dailyLogManager.shouldRefresh {
+                
+                VStack(spacing: 40) {
+                    Button(action: {
+                        //                    dailyLogManager.AllowLogButtonIfNeeded() { success in
+                        //                        showWebView = success
+                        //                        print(success)
+                        //                    }
+                        //                    if dailyLogManager.shouldRefresh {
                         showWebView = true
-//
-//                    }
+                        //
+                        //                    }
+                        
+                    })
+                    {
+                        Text(dailyLogManager.shouldRefresh ? "registre seu dia musical" : "ainda não está na hora")
+                    }
+                    .buttonStyle(dailyLogManager.shouldRefresh ? .neumorphicPurple : .neumorphicGray)
                     
-                })
-                {
-                    Text(dailyLogManager.shouldRefresh ? "toque aqui para comecar" : "ainda não está na hora")
-                }
-                
-                
-                Button(action: {
-                    coordinator.goToGridView()
-                }) {
-                   Text("see your logs")
+                    
+                    Button(action: {
+                        coordinator.goToGridView()
+                    }) {
+                        Text("veja sua agenda")
+                            .foregroundColor(Color(.purple))
+                    }
                 }
                 Spacer()
                 HStack {
@@ -56,7 +61,6 @@ struct HomeView: View {
                         .font(.footnote)
                     Image("Spotify_Logo_RGB_Green")
                         .resizable()
-//                        .frame(width: 155, height: 50)
                         .aspectRatio(3.3, contentMode: .fit)
                 }
                 .padding(.bottom, 36)
