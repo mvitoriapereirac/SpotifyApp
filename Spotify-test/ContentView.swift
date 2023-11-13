@@ -17,43 +17,29 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var songs: [String] = []
     let artist = "a"
-    @State private var timeIsUp = false
+    @State private var enableButton = false
     @State private var showWebView = false
+    
     @ObservedObject var webViewDelegate = WebViewNavDelegate.shared
-    var dailyLogManager = DailyLogManager.shared
+    @ObservedObject var dailyLogManager = DailyLogManager.shared
     
     var body: some View {
         ZStack {
             
-//            List(daysInfo) { dayInfo in
-//                let day = String(dayInfo.day)
-//                let month = String(dayInfo.month)
-////                let color = String(dayInfo.color)
-//                Text(day + month)
-//
-//
-//                    }
-//
-//                Group {
-//                    ForEach(songs, id: \.self) { songName in
-//                        Text(songName)
-//                            .font(.headline)
-//                    }
-//                }
-                
-                
-                
-//            } else {
+
                 Button(action: {
-                    dailyLogManager.AllowLogButtonIfNeeded() { success in
-                        showWebView = success
-                        print(success)
-                    }
-//                    showWebView = true
+//                    dailyLogManager.AllowLogButtonIfNeeded() { success in
+//                        showWebView = success
+//                        print(success)
+//                    }
+//                    if dailyLogManager.shouldRefresh {
+                        showWebView = true
+//
+//                    }
                     
                 })
                 {
-                    Text("toque aqui para comecar")
+                    Text(dailyLogManager.shouldRefresh ? "toque aqui para comecar" : "ainda não está na hora")
                 }
                 
                 if showWebView {
@@ -68,33 +54,40 @@ struct ContentView: View {
 
                     }
                     .onChange(of: webViewDelegate.TokenActivitySign) { newValue in
-
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                            print("//////")
-                            print(webViewDelegate.TokenActivitySign)
-//                            if webViewDelegate.isTokenReady == true {
-                                print("passei aq")
-                                DispatchQueue.main.async {
-                                    APIService.shared.getNameAndURLStrings()
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                                        coordinator.goToResultsViewFirst()
-
-
-                                    }
-                                }
-//                                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-//                                    coordinator.goToResultsView()
+//                        DispatchQueue.main.async {
+//                            APIService.shared.getNameAndURLStrings()
+//                            DispatchQueue.main.asyncAfter(deadline: .now() + 7.0) {
+//                                coordinator.goToTodaysResultsView()
 //
-//                                    timeIsUp = true
 //
-//                                }
+//                                                                }
+//                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            Task {
+                                try await APIService.shared.list = APIService.shared.getRecentlyListened()
+                    //
+                                
+                                try await APIService.shared.genres = APIService.shared.getRecentlyPlayedGenres()
+                                print("********")
+
+                                print(APIService.shared.dict)
+                                coordinator.goToTodaysResultsView()
                             }
+//                            print("//////")
+//                            print(webViewDelegate.TokenActivitySign)
+////                            if webViewDelegate.isTokenReady == true {
+//                                print("passei aq")
+//                                DispatchQueue.main.async {
+//                                    APIService.shared.getNameAndURLStrings()
+//                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//                                        coordinator.goToTodaysResultsView()
+//
+//                            }
 //                        }
                         
                     }
-                    if timeIsUp {
-
-                    }
+                  
                     
 //                    .onAppear {
 //                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
@@ -112,14 +105,19 @@ struct ContentView: View {
 //                            }
 //                        }
 //
-//                    }
+                    }
                     
                             
                         
                 }
                 
             }
-            //
+        .onAppear {
+            dailyLogManager.AllowLogButtonIfNeeded { success in
+                enableButton = dailyLogManager.shouldRefresh
+            }
+        }
+        
         .ignoresSafeArea(.all)
 
             
@@ -157,14 +155,18 @@ class WebViewNavDelegate: NSObject, WKNavigationDelegate, ObservableObject {
     static let shared = WebViewNavDelegate()
     var tokenString = ""
     @Published var TokenActivitySign = false
+    var iterator = 0
+    var isFirstLogin = true
     
-
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-
+        
+        
         guard let urlString = webView.url?.absoluteString else { return }
         print(urlString)
+
         
         if urlString.contains("#access_token=") {
+
             let range = urlString.range(of:"#access_token=")
             guard let index = range?.upperBound else { return }
             
@@ -185,20 +187,44 @@ class WebViewNavDelegate: NSObject, WKNavigationDelegate, ObservableObject {
             
         }
     }
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        if ((webView.url?.absoluteString.contains("google")) != nil) {
+            webView.isHidden = true 
+        }
+        
+//        if isFirstLogin {
+//            if iterator > 0 {
+//                if ((webView.url?.absoluteString.contains("google")) != nil) {
+////                    if !tokenString.isEmpty {
+//                                        webView.isHidden = true
+//                                        isFirstLogin = false
+//                    //                }
+//                }
+////
+//
+//            }
+//            iterator += 1
+//
+//        } else {
+//            webView.isHidden = true
+//
+//        }
+            
+
+//        }
+//        if iterator > 0 {
+//            isFirstLogin = false
+//            webView.isHidden = true
+//
+//        }
+//        iterator += 1
+
+    }
+    
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         NSLog("Erro de navegacao: \(error.localizedDescription)")
     }
-//    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-//        if let host = navigationAction.request.url?.host {
-//            if host.contains("google") {
-//                decisionHandler(.cancel)
-//                return
-//            } else {
-//                decisionHandler(.allow)
-//            }
-//        }
-//
-//    }
+
     
     
 }

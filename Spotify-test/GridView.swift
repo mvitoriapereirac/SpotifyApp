@@ -67,6 +67,9 @@ struct GridView: View {
                 }
 
             }
+            .onAppear{
+                print("aqui \(daysInfo)")
+            }
             .padding()
         }
 

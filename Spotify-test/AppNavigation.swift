@@ -36,7 +36,7 @@ struct AppNavigation: View {
                     case .homeView:
                         ContentView()
                         
-                    case .resultsViewFirst:
+                    case .todaysResultsView:
                         ResultsView(isFirstVisitToday: true)
                     }
                     

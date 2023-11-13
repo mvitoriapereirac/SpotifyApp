@@ -41,7 +41,7 @@ class ViewModel {
 let viewmd = ViewModel(auth: GoogleApiService())
 
 
-class APIService {
+class APIService: ObservableObject {
     static let shared = APIService()
     var list: [LastListenedItem] = []
     var dict: [String : String] = [:]
@@ -130,6 +130,8 @@ class APIService {
             print(list)
             print("lista ouvidos recentes")
             print(list.count)
+            dict = APIService.shared.transformIntoDict(list: list)
+
             return list
 //
         }
@@ -146,7 +148,8 @@ class APIService {
     func getNameAndURLStrings() {
         Task {
             try await list = APIService.shared.getRecentlyListened()
-            dict = APIService.shared.transformIntoDict(list: list)
+//            dict = APIService.shared.transformIntoDict(list: list)
+            
             try await genres = APIService.shared.getRecentlyPlayedGenres()
             print("********")
 

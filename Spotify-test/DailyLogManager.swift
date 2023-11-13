@@ -6,12 +6,15 @@
 //
 
 import Foundation
-class DailyLogManager: NSObject {
+class DailyLogManager: NSObject, ObservableObject {
 
     static let shared = DailyLogManager()
     private let defaults = UserDefaults.standard
     private let defaultsKey = "lastLog"
     private let calendar = Calendar.current
+    var daysOfAbsence: [Int] = []
+    @Published var shouldRefresh = false
+    
 
     func AllowLogButtonIfNeeded(completion: (Bool) -> Void) {
 
@@ -24,18 +27,30 @@ class DailyLogManager: NSObject {
         }
     }
 
-    private func isRefreshRequired(userPickedHour: Int = 18) -> Bool {
+    private func isRefreshRequired(userPickedHour: Int = 12) -> Bool {
 
         guard let lastRefreshDate = defaults.object(forKey: defaultsKey) as? Date else {
-            return true
+            shouldRefresh = true
+            return shouldRefresh
         }
 
         if let diff = calendar.dateComponents([.day], from: lastRefreshDate, to: Date()).day,
             let currentHour =  calendar.dateComponents([.hour], from: Date()).hour,
             diff >= 1, userPickedHour <= currentHour {
-            return true
+            addBlankDays(diff: diff)
+            shouldRefresh = true
+            return shouldRefresh
         } else {
-            return false
+            return shouldRefresh
+        }
+    }
+    
+    private func addBlankDays(diff: Int) {
+        if diff > 1 {
+            daysOfAbsence = Array(1...(diff - 1))
+            
+            print(daysOfAbsence)
+            
         }
     }
 }

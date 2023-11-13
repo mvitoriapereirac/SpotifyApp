@@ -22,6 +22,7 @@ class ResultsViewModel: ObservableObject {
     @Published var weekday = Calendar.current.component(.weekday, from: Date())
     @Published var day = Calendar.current.component(.day, from: Date())
     @Published var month = Calendar.current.component(.month, from: Date())
+    @Published var color: UIColor?
 
     
     @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
@@ -58,6 +59,7 @@ class ResultsViewModel: ObservableObject {
         self.total = total
         self.current = current
         genresArray()
+        
 //        persistData()
     }
     
@@ -182,8 +184,13 @@ class ResultsViewModel: ObservableObject {
     }
     
     func makeUIColorBlend() -> UIColor {
-        let color = UIColor.blend(color1: self.currentColor[0], intensity1: self.current[0], color2: self.currentColor[1], intensity2: self.current[1], color3: self.currentColor[2], intensity3: self.current[2], color4: self.currentColor[3], intensity4: self.current[3])
-        return color
+        if !currentColor.isEmpty {
+            let color = UIColor.blend(color1: self.currentColor[0], intensity1: self.current[0], color2: self.currentColor[1], intensity2: self.current[1], color3: self.currentColor[2], intensity3: self.current[2], color4: self.currentColor[3], intensity4: self.current[3])
+            return color
+
+        }
+        
+        return UIColor()
     }
     
 }

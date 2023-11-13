@@ -43,13 +43,13 @@ class Coordinator: ObservableObject {
         path.append(Route.resultsView)
     }
     
-    func goToResultsViewFirst() {
-        path.append(Route.resultsViewFirst)
+    func goToTodaysResultsView() {
+        path.append(Route.todaysResultsView)
     }
 }
 
 enum Route {
-    case resultsViewFirst
+    case todaysResultsView
     case resultsView
     case gridView
     case homeView
