@@ -23,9 +23,9 @@ class Coordinator: ObservableObject {
             }
         }
     }
-    func gotoHomePage() {
-        path.removeLast(path.count)
-    }
+//    func gotoHomePage() {
+//        path.removeLast(path.count)
+//    }
     
     func goToHomePage() {
         path.append(Route.homeView)

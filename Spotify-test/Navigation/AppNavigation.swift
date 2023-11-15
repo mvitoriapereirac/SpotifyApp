@@ -16,9 +16,7 @@ struct AppNavigation: View {
                 selectedScreen
             }
             .environmentObject(coordinator)
-            .onAppear{
-                
-            }
+            
         } else {
                 // TO DO: Fallback on earlier versions
             }
@@ -26,7 +24,7 @@ struct AppNavigation: View {
         
         @available(iOS 16.0, *)
         private var selectedScreen: some View {
-            HomeView()
+            OnboardingView()
                 .navigationDestination(for: Route.self) { route in
                     switch route {
                     case .gridView:

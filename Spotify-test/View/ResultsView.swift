@@ -85,12 +85,12 @@ struct ResultsView: View {
                         VStack{
                             
                             FlowerAnimation(color: isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor))
-                                .padding(.vertical, 100)
+                                .padding(.vertical, 30)
                             
-                            Text("Cor do dia")
+                            Text("Combinação de cores do dia")
                                 .foregroundColor(.black)
-                                .font(.subheadline.bold())
-                                .padding(8)
+                                .font(.subheadline.monospaced())
+                                .padding(.all, 16)
                             
                             VStack(alignment: .leading, spacing: 25) {
                                 
@@ -231,9 +231,10 @@ struct ResultsView: View {
 
                                             })
                                         }) {
-                                            Text("seus registros")
+                                            Text("Seus registros")
                                         }
                                         .buttonStyle(NeumorphicButtonStyle(bgColor: isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor)))
+                                        .padding()
                                         
                                         Spacer()
                                         

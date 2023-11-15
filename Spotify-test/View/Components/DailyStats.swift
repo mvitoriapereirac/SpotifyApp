@@ -77,53 +77,7 @@ struct DailyStats: View {
                 .background(Color(arrayColors[3]).cornerRadius(4.0).opacity(0.8))
         }
         
-        //            ForEach(arrayValues, id: \.self) { item in
-        //                if item != 0.00 {
-        //                    if item == arrayValues[0] {
-        //                        Text("\(item * 100)".masked)
-        //                            .padding(.horizontal, 12)
-        //                            .padding(.vertical, 4)
-        //                            .foregroundColor(.white)
-        //                            .frame(alignment: .leading)
-        //                            .font(.title3)
-        //                            .background(Color(arrayColors[0]).cornerRadius(4.0).opacity(0.8))
-        //
-        //
-        //                    } else if item == arrayValues[1] {
-        //                        Text("\(item * 100)".masked)
-        //                            .padding(.horizontal, 12)
-        //                            .padding(.vertical, 4)
-        //                            .foregroundColor(.white)
-        //                            .frame(alignment: .leading)
-        //                            .font(.title3)
-        //                            .background(Color(arrayColors[1]).cornerRadius(4.0).opacity(0.8))
-        //
-        //                    } else if item == arrayValues[2] {
-        //                        Text("\(item * 100)".masked)
-        //                            .padding(.horizontal, 12)
-        //                            .padding(.vertical, 4)
-        //                            .foregroundColor(.white)
-        //                            .frame(alignment: .leading)
-        //                            .font(.title3)
-        //                            .background(Color(arrayColors[2]).cornerRadius(4.0).opacity(0.8))
-        //
-        //                    } else if item == arrayValues[3] {
-        //                        Text("\(item * 100)".masked)
-        //                            .padding(.horizontal, 12)
-        //                            .padding(.vertical, 4)
-        //                            .foregroundColor(.white)
-        //                            .frame(alignment: .leading)
-        //                            .font(.title3)
-        //                            .background(Color(arrayColors[3]).cornerRadius(4.0).opacity(0.8))
-        //
-        //
-        //
-        //
-        //                    }
-        //                }
-        //
-        //
-        //            }
+        
         
         
     }

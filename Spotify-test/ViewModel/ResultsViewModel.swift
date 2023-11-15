@@ -213,29 +213,6 @@ struct GenresList {
 }
 
 
-struct Mood: Hashable {
-    let genres: [String]
-    let color: UIColor
-    let mood: String
-    
-    init(genres: [String], color: UIColor, mood: String) {
-        self.genres = genres
-        self.color = color
-        self.mood = mood
-    }
-}
-
-struct MainMoods: Hashable {
-    let dark = Mood(genres: GenresList.rockGenres, color: .blue, mood: "introspective")
-    let bright = Mood(genres: GenresList.brGenres, color: .orange, mood: "cheerful")
-    let fun = Mood(genres: GenresList.popGenres, color: .systemPink, mood: "festive")
-    let soft = Mood(genres: GenresList.indieGenres, color: .purple, mood: "soft")
-}
 
 
-//struct DayInfo {
-//    let day: Int
-//    let weekday: Int
-//    let color: UIColor
-//
-//}
+

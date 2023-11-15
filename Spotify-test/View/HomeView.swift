@@ -32,10 +32,6 @@ struct HomeView: View {
                 
                 VStack(spacing: 40) {
                     Button(action: {
-//                        dailyLogManager.AllowLogButtonIfNeeded() { success in
-//                            showWebView = success
-//                            print(success)
-//                        }
                         if dailyLogManager.shouldRefresh {
                             showWebView = true
                             
@@ -131,6 +127,8 @@ struct HomeView: View {
         .onAppear {
             dailyLogManager.AllowLogButtonIfNeeded { success in
                 enableButton = dailyLogManager.shouldRefresh
+                NotificationManager.shared.scheduleNotifications()
+
             }
         }
         

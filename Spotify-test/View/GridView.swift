@@ -92,7 +92,7 @@ struct GridView: View {
                                                         if index != 0 && index != 1 && index != 2 {
 //                                                        if index != 0 {
 
-                                                            let arrayIterator = Array(1...(index))
+                                                            let arrayIterator = Array(1...(index-1))
                                                             ForEach(arrayIterator, id: \.self) { i in
                                                                 RectangleView(RectColor: .clear, frame: 50)
                     
