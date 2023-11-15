@@ -11,9 +11,9 @@ import WebKit
 struct HomeView: View {
     
     
-
+    
     @EnvironmentObject var coordinator: Coordinator
-
+    
     @State private var enableButton = false
     @State private var showWebView = false
     @State private var showLoadingPopup = false
@@ -32,14 +32,14 @@ struct HomeView: View {
                 
                 VStack(spacing: 40) {
                     Button(action: {
-                        //                    dailyLogManager.AllowLogButtonIfNeeded() { success in
-                        //                        showWebView = success
-                        //                        print(success)
-                        //                    }
-                        //                    if dailyLogManager.shouldRefresh {
-                        showWebView = true
-                        //
-                        //                    }
+//                        dailyLogManager.AllowLogButtonIfNeeded() { success in
+//                            showWebView = success
+//                            print(success)
+//                        }
+                        if dailyLogManager.shouldRefresh {
+                            showWebView = true
+                            
+                        }
                         
                     })
                     {
@@ -53,6 +53,7 @@ struct HomeView: View {
                     }) {
                         Text("veja sua agenda")
                             .foregroundColor(Color(.purple))
+                            .font(.headline.bold())
                     }
                 }
                 Spacer()
@@ -66,64 +67,66 @@ struct HomeView: View {
                 .padding(.bottom, 36)
                 .frame(width: 200)
             }
-
-                        
-                        
-                        
-                        ZStack {
-                            
-                            if showLoadingPopup {
-                                Color(.black).opacity(0.4).ignoresSafeArea(.all)
-                                VStack {
-                                    LoadingBar()
-                                    Text("Carregando resultados")
-                                        .font(.headline)
-                                        .foregroundColor(.black)
-                                    
-                                }
-                                .padding(.horizontal, 36)
-                                .padding(.vertical, 240)
-                                .background(Color.white.cornerRadius(25))
-
-                            }
-                            
-                            if showWebView {
-                                WebView()
-                                    .ignoresSafeArea(.all)
-                                    .onAppear{
-                                        showLoadingPopup = true
-
-                                    }
-
-                            }
-                        
-                    }
-                    .onChange(of: webViewDelegate.tokenString) { newValue in
-                        showWebView = false
-
-                    }
-                    .onChange(of: webViewDelegate.TokenActivitySign) { newValue in
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now()) {
-                            Task {
-                                try await APIService.shared.list = APIService.shared.getRecentlyListened()
-                                try await APIService.shared.genres = APIService.shared.getRecentlyPlayedGenres()
-                                print(APIService.shared.dict)
-                                showWebView = false
-                                showLoadingPopup = false
-                                coordinator.goToTodaysResultsView()
-                            }
-                            
-                        
-                    }
+            
+            
+            
+            
+            ZStack {
                 
-                    }
-                    
-                            
+                if showLoadingPopup {
+                    Color(.black).opacity(0.4).ignoresSafeArea(.all)
+                    VStack {
+                        LoadingBar()
+                        Text("Carregando resultados")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .onAppear {
+                                dailyLogManager.shouldRefresh = false
+                            }
                         
-//                }
+                    }
+                    .padding(.horizontal, 36)
+                    .padding(.vertical, 240)
+                    .background(Color.white.cornerRadius(25))
+                    
+                }
+                
+                if showWebView {
+                    WebView()
+                        .ignoresSafeArea(.all)
+                        .onAppear{
+                            showLoadingPopup = true
+                            
+                        }
+                    
+                }
                 
             }
+            .onChange(of: webViewDelegate.tokenString) { newValue in
+                showWebView = false
+                
+            }
+            .onChange(of: webViewDelegate.TokenActivitySign) { newValue in
+                
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    Task {
+                        try await APIService.shared.list = APIService.shared.getRecentlyListened()
+                        try await APIService.shared.genres = APIService.shared.getRecentlyPlayedGenres()
+                        print(APIService.shared.dict)
+                        showWebView = false
+                        showLoadingPopup = false
+                        coordinator.goToTodaysResultsView()
+                    }
+                    
+                    
+                }
+                
+            }
+            
+            
+            
+            
+        }
         
         .onAppear {
             dailyLogManager.AllowLogButtonIfNeeded { success in
@@ -132,10 +135,10 @@ struct HomeView: View {
         }
         
         .ignoresSafeArea(.all)
-
-            
-            
-        }
+        
+        
+        
+    }
     
 }
 

@@ -5,6 +5,7 @@
 //  Created by mvitoriapereirac on 01/11/23.
 //
 
+//This class asserts that the user can only check their stats once a day.
 import Foundation
 class DailyLogManager: NSObject, ObservableObject {
 
@@ -27,7 +28,7 @@ class DailyLogManager: NSObject, ObservableObject {
         }
     }
 
-    private func isRefreshRequired(userPickedHour: Int = 18) -> Bool {
+    private func isRefreshRequired(userPickedHour: Int = 17) -> Bool {
 
         guard let lastRefreshDate = defaults.object(forKey: defaultsKey) as? Date else {
             shouldRefresh = true

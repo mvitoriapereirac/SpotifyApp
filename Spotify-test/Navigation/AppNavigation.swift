@@ -16,6 +16,9 @@ struct AppNavigation: View {
                 selectedScreen
             }
             .environmentObject(coordinator)
+            .onAppear{
+                
+            }
         } else {
                 // TO DO: Fallback on earlier versions
             }

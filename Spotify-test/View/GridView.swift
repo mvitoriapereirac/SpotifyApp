@@ -28,7 +28,7 @@ struct GridView: View {
             HStack {
                 Image(systemName: "chevron.left")
                     .resizable()
-                    .frame(width: 20, height: 32)
+                    .frame(width: 20, height: 30)
                     .padding()
                     .foregroundColor(Color(.purple))
                     .onTapGesture {
@@ -89,10 +89,10 @@ struct GridView: View {
                     
                                                     if daysInfo.first?.weekday ?? 0 == index {
                     
-//                                                        if index != 0 || index != 1 || index != 2 {
-                                                        if index != 0 {
+                                                        if index != 0 && index != 1 && index != 2 {
+//                                                        if index != 0 {
 
-                                                            let arrayIterator = Array(1...(index - 1))
+                                                            let arrayIterator = Array(1...(index))
                                                             ForEach(arrayIterator, id: \.self) { i in
                                                                 RectangleView(RectColor: .clear, frame: 50)
                     
@@ -100,16 +100,16 @@ struct GridView: View {
                                                             }
                     
                                                         }
-                                                        else if index == 1 || index == 2 {
-                                                            if index == 1 {
-                                                                RectangleView(RectColor: .clear, frame: 50)
-
-                                                            }
+                                                        else if index == 2 {
                                                             if index == 2 {
                                                                 RectangleView(RectColor: .clear, frame: 50)
-                                                                RectangleView(RectColor: .clear, frame: 50)
 
                                                             }
+//                                                            if index == 2 {
+//                                                                RectangleView(RectColor: .clear, frame: 50)
+//                                                                RectangleView(RectColor: .clear, frame: 50)
+//
+//                                                            }
 
                                                         }
                     
