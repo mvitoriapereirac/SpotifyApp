@@ -21,8 +21,8 @@ struct Mood: Hashable {
 }
 
 struct MainMoods: Hashable {
-    let dark = Mood(genres: GenresList.rockGenres, color: .blue, mood: "introspectivo")
-    let bright = Mood(genres: GenresList.brGenres, color: .orange, mood: "alegre")
-    let fun = Mood(genres: GenresList.popGenres, color: .systemPink, mood: "festeiro")
-    let soft = Mood(genres: GenresList.indieGenres, color: .purple, mood: "suave")
+    let dark = Mood(genres: GenresList.rockGenres, color: .blue, mood: NSLocalizedString("introspective", comment: ""))
+    let bright = Mood(genres: GenresList.brGenres, color: .orange, mood: NSLocalizedString("cheerful", comment: ""))
+    let fun = Mood(genres: GenresList.popGenres, color: .systemPink, mood: NSLocalizedString("festive", comment: ""))
+    let soft = Mood(genres: GenresList.indieGenres, color: .purple, mood:  NSLocalizedString("soft", comment: ""))
 }

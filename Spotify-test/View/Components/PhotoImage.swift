@@ -79,7 +79,7 @@ struct EditableRoundedRectDayImage: View {
                     switch photosManager.imageState {
                     case .empty:
                         VStack {
-                        Text("Selecione uma imagem")
+                        Text(NSLocalizedString("select-img", comment: ""))
                             .font(.system(size: 14))
                             .foregroundColor(Color(color))
                             .padding(.top, 100)

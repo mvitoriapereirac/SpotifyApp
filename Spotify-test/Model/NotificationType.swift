@@ -29,7 +29,7 @@ enum NotificationType {
     var body: String {
         switch self {
         case .timeIsUp:
-            return "Descubra agora suas inclinações musicais (e afetivas!) de hoje"
+            return "Descubra agora suas tendências musicais (e afetivas!) de hoje"
         }
     }
 

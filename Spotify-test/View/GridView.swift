@@ -36,26 +36,26 @@ struct GridView: View {
                     }
                 Spacer()
             }
-            MoodCaption(color: .projectWhite)
+            MoodCaption(color: .projectBlack)
             LazyVGrid(columns: columns) {
-                Text("D")
+                Text("sunday")
                     .font(.headline)
-                Text("S")
-                    .font(.headline)
-                
-                Text("T")
+                Text("monday")
                     .font(.headline)
                 
-                Text("Q")
+                Text("tuesday")
                     .font(.headline)
                 
-                Text("Q")
+                Text("wednesday")
                     .font(.headline)
                 
-                Text("S")
+                Text("thursday")
                     .font(.headline)
                 
-                Text("S")
+                Text("friday")
+                    .font(.headline)
+                
+                Text("saturday")
                     .font(.headline)
             }
             .padding()
@@ -64,70 +64,70 @@ struct GridView: View {
                 
                 LazyVGrid(columns: columns) {
                     
-//                    if daysInfo.first?.weekday != 0 || daysInfo.first?.weekday != 1 || daysInfo.first?.weekday != 2 {
-//                        ForEach(1...((daysInfo.first?.weekday ?? 0) - 1), id: \.self) { _ in
-//                            RectangleView(RectColor: .clear, frame: 50)
-//
-//                        }
-//                        ForEach(daysInfo, id: \.self) { dayInfo in
-//                            RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
-//                                .onTapGesture {
-//                                    viewModel.colorFromSelected = dayInfo.color as? UIColor
-//                                    viewModel.dayFromSelected = Int(dayInfo.day)
-//                                    viewModel.monthFromSelected = Int(dayInfo.month)
-//                                    viewModel.weekdayFromSelected = Int(dayInfo.weekday)
-//                                    coordinator.goToResultsView()
-//
-//                                }
-//                        }
-//                    }
+                    //                    if daysInfo.first?.weekday != 0 || daysInfo.first?.weekday != 1 || daysInfo.first?.weekday != 2 {
+                    //                        ForEach(1...((daysInfo.first?.weekday ?? 0) - 1), id: \.self) { _ in
+                    //                            RectangleView(RectColor: .clear, frame: 50)
+                    //
+                    //                        }
+                    //                        ForEach(daysInfo, id: \.self) { dayInfo in
+                    //                            RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
+                    //                                .onTapGesture {
+                    //                                    viewModel.colorFromSelected = dayInfo.color as? UIColor
+                    //                                    viewModel.dayFromSelected = Int(dayInfo.day)
+                    //                                    viewModel.monthFromSelected = Int(dayInfo.month)
+                    //                                    viewModel.weekdayFromSelected = Int(dayInfo.weekday)
+                    //                                    coordinator.goToResultsView()
+                    //
+                    //                                }
+                    //                        }
+                    //                    }
                     
                     
-                                        ForEach(daysInfo, id: \.self) { dayInfo in
-                                            if dayInfo == daysInfo.first {
-                                                ForEach(1...7, id: \.self) { index in
-                    
-                                                    if daysInfo.first?.weekday ?? 0 == index {
-                    
-                                                        if index != 0 && index != 1 && index != 2 {
-//                                                        if index != 0 {
-
-                                                            let arrayIterator = Array(1...(index-1))
-                                                            ForEach(arrayIterator, id: \.self) { i in
-                                                                RectangleView(RectColor: .clear, frame: 50)
-                    
-                     
-                                                            }
-                    
-                                                        }
-                                                        else if index == 2 {
-                                                            if index == 2 {
-                                                                RectangleView(RectColor: .clear, frame: 50)
-
-                                                            }
-//                                                            if index == 2 {
-//                                                                RectangleView(RectColor: .clear, frame: 50)
-//                                                                RectangleView(RectColor: .clear, frame: 50)
-//
-//                                                            }
-
-                                                        }
-                    
-                    
-                    
-                                                    }
-                                                }
-                    
-                                            }
-                    
-                                            RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
-                                                .onTapGesture {                                                    
-                                                    viewModel.dayInfo = dayInfo
-                                                    coordinator.goToResultsView()
-                    
-                                                    }
-
+                    ForEach(daysInfo, id: \.self) { dayInfo in
+                        if dayInfo == daysInfo.first {
+                            ForEach(1...7, id: \.self) { index in
+                                
+                                if daysInfo.first?.weekday ?? 0 == index {
+                                    
+                                    if index != 0 && index != 1 && index != 2 {
+                                        //                                                        if index != 0 {
+                                        
+                                        let arrayIterator = Array(1...(index-1))
+                                        ForEach(arrayIterator, id: \.self) { i in
+                                            RectangleView(RectColor: .clear, frame: 50)
+                                            
+                                            
                                         }
+                                        
+                                    }
+                                    else if index == 2 {
+                                        if index == 2 {
+                                            RectangleView(RectColor: .clear, frame: 50)
+                                            
+                                        }
+                                        //                                                            if index == 2 {
+                                        //                                                                RectangleView(RectColor: .clear, frame: 50)
+                                        //                                                                RectangleView(RectColor: .clear, frame: 50)
+                                        //
+                                        //                                                            }
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                }
+                            }
+                            
+                        }
+                        
+                        RectangleView(RectColor: dayInfo.color as! UIColor, frame: 50)
+                            .onTapGesture {
+                                viewModel.dayInfo = dayInfo
+                                coordinator.goToResultsView()
+                                
+                            }
+                        
+                    }
                     
                 }
                 .padding()

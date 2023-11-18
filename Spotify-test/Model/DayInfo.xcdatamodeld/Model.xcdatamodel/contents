@@ -3,7 +3,7 @@
     <entity name="DayInfo" representedClassName="DayInfo" syncable="YES" codeGenerationType="class">
         <attribute name="chosenPic" optional="YES" attributeType="Binary"/>
         <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName=""/>
-        <attribute name="current" optional="YES" attributeType="Transformable"/>
+        <attribute name="current" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName"/>
         <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="dayMessage" optional="YES" attributeType="String"/>
         <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>

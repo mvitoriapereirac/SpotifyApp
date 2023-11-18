@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0EC19E2B0857BA00BF29FF /* Localizable (Portuguese (Brazil)).strings in Resources */ = {isa = PBXBuildFile; fileRef = BC0EC1A02B0857BA00BF29FF /* Localizable (Portuguese (Brazil)).strings */; };
+		BC0EC1A32B0857E200BF29FF /* Localizable (English).strings in Resources */ = {isa = PBXBuildFile; fileRef = BC0EC1A52B0857E200BF29FF /* Localizable (English).strings */; };
+		BC0EC1A92B0863D900BF29FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC0EC1AB2B0863D900BF29FF /* Localizable.strings */; };
 		BC152B892AE862BA0047DDBB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC152B882AE862BA0047DDBB /* Color.swift */; };
 		BC152B8B2AE887670047DDBB /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC152B8A2AE887670047DDBB /* ResultsViewModel.swift */; };
 		BC1A614D2B03AABA00554997 /* MoodCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A614C2B03AABA00554997 /* MoodCaption.swift */; };
@@ -23,6 +26,7 @@
 		BC2108872B05605500ECFE25 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2108862B05605500ECFE25 /* NotificationType.swift */; };
 		BC2108892B05696700ECFE25 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2108882B05696700ECFE25 /* OnboardingView.swift */; };
 		BC21088B2B0589DA00ECFE25 /* MoodsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21088A2B0589DA00ECFE25 /* MoodsModel.swift */; };
+		BC21088D2B06793D00ECFE25 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21088C2B06793D00ECFE25 /* UserDefaultsConstants.swift */; };
 		BC5508972AC5F712005817BD /* Spotify_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5508962AC5F712005817BD /* Spotify_testApp.swift */; };
 		BC5508992AC5F712005817BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5508982AC5F712005817BD /* HomeView.swift */; };
 		BC55089B2AC5F713005817BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC55089A2AC5F713005817BD /* Assets.xcassets */; };
@@ -47,6 +51,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0EC19F2B0857BA00BF29FF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable (Portuguese (Brazil)).strings"; sourceTree = "<group>"; };
+		BC0EC1A42B0857E200BF29FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Localizable (English).strings"; sourceTree = "<group>"; };
+		BC0EC1AA2B0863D900BF29FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BC0EC1AC2B0863DC00BF29FF /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BC152B882AE862BA0047DDBB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		BC152B8A2AE887670047DDBB /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		BC1A614C2B03AABA00554997 /* MoodCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCaption.swift; sourceTree = "<group>"; };
@@ -63,6 +71,7 @@
 		BC2108862B05605500ECFE25 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 		BC2108882B05696700ECFE25 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BC21088A2B0589DA00ECFE25 /* MoodsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsModel.swift; sourceTree = "<group>"; };
+		BC21088C2B06793D00ECFE25 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
 		BC5508932AC5F712005817BD /* Spotify-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5508962AC5F712005817BD /* Spotify_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify_testApp.swift; sourceTree = "<group>"; };
 		BC5508982AC5F712005817BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -102,9 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				BC2108882B05696700ECFE25 /* OnboardingView.swift */,
+				BC5508982AC5F712005817BD /* HomeView.swift */,
 				BCF590B42AED6A4E0037E6C1 /* ResultsView.swift */,
 				BCF590B22AED63DD0037E6C1 /* GridView.swift */,
-				BC5508982AC5F712005817BD /* HomeView.swift */,
 				BC21086B2B00517800ECFE25 /* Components */,
 			);
 			path = View;
@@ -113,6 +122,9 @@
 		BC2108692B00514800ECFE25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC0EC1AB2B0863D900BF29FF /* Localizable.strings */,
+				BC0EC1A02B0857BA00BF29FF /* Localizable (Portuguese (Brazil)).strings */,
+				BC0EC1A52B0857E200BF29FF /* Localizable (English).strings */,
 				BC61DF3F2AF183BB0035B24A /* DayInfo.xcdatamodeld */,
 				BC9254D72AFD3B5B0028DE45 /* PhotoModel.swift */,
 				BCE9A1BD2ADF63F7001D6564 /* APIService.swift */,
@@ -122,6 +134,7 @@
 				BCE9A1BB2ADF6360001D6564 /* NetworkError.swift */,
 				BC2108862B05605500ECFE25 /* NotificationType.swift */,
 				BC21088A2B0589DA00ECFE25 /* MoodsModel.swift */,
+				BC21088C2B06793D00ECFE25 /* UserDefaultsConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +285,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = BC55088A2AC5F712005817BD;
 			productRefGroup = BC5508942AC5F712005817BD /* Products */;
@@ -288,8 +302,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0EC1A92B0863D900BF29FF /* Localizable.strings in Resources */,
 				BC55089E2AC5F713005817BD /* Preview Assets.xcassets in Resources */,
 				BC55089B2AC5F713005817BD /* Assets.xcassets in Resources */,
+				BC0EC1A32B0857E200BF29FF /* Localizable (English).strings in Resources */,
+				BC0EC19E2B0857BA00BF29FF /* Localizable (Portuguese (Brazil)).strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +347,7 @@
 				BCFF30442AFBE05B0063AF61 /* StringProtocol.swift in Sources */,
 				BC2108772B005CE700ECFE25 /* Delegate.swift in Sources */,
 				BC21087F2B01481400ECFE25 /* ButtonStyle.swift in Sources */,
+				BC21088D2B06793D00ECFE25 /* UserDefaultsConstants.swift in Sources */,
 				BC21088B2B0589DA00ECFE25 /* MoodsModel.swift in Sources */,
 				BC2108752B005CA400ECFE25 /* WebView.swift in Sources */,
 				BC60DE402AFD755800DD2DD8 /* KeyboardModifier.swift in Sources */,
@@ -339,6 +357,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC0EC1A02B0857BA00BF29FF /* Localizable (Portuguese (Brazil)).strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0EC19F2B0857BA00BF29FF /* pt-BR */,
+			);
+			name = "Localizable (Portuguese (Brazil)).strings";
+			sourceTree = "<group>";
+		};
+		BC0EC1A52B0857E200BF29FF /* Localizable (English).strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0EC1A42B0857E200BF29FF /* en */,
+			);
+			name = "Localizable (English).strings";
+			sourceTree = "<group>";
+		};
+		BC0EC1AB2B0863D900BF29FF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0EC1AA2B0863D900BF29FF /* en */,
+				BC0EC1AC2B0863DC00BF29FF /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BC55089F2AC5F713005817BD /* Debug */ = {

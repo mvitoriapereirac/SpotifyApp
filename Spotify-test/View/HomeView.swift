@@ -8,6 +8,7 @@
 import SwiftUI
 import WebKit
 
+//TO DO: refactor code in order to create a viewmodel for this view
 struct HomeView: View {
     
     
@@ -17,9 +18,12 @@ struct HomeView: View {
     @State private var enableButton = false
     @State private var showWebView = false
     @State private var showLoadingPopup = false
+    @State private var showLoadingBar = false
     
     @ObservedObject var webViewDelegate = WebViewNavDelegate.shared
     @ObservedObject var dailyLogManager = DailyLogManager.shared
+    
+
     
     var body: some View {
         ZStack {
@@ -39,7 +43,7 @@ struct HomeView: View {
                         
                     })
                     {
-                        Text(dailyLogManager.shouldRefresh ? "registre seu dia musical" : "ainda não está na hora")
+                        Text(dailyLogManager.shouldRefresh ? "allow-button" : "deny-button")
                     }
                     .buttonStyle(dailyLogManager.shouldRefresh ? .neumorphicPurple : .neumorphicGray)
                     
@@ -47,7 +51,7 @@ struct HomeView: View {
                     Button(action: {
                         coordinator.goToGridView()
                     }) {
-                        Text("veja sua agenda")
+                        Text("see-your-journal")
                             .foregroundColor(Color(.purple))
                             .font(.headline.bold())
                     }
@@ -67,23 +71,32 @@ struct HomeView: View {
             
             
             
-            ZStack {
+//            ZStack {
                 
                 if showLoadingPopup {
                     Color(.black).opacity(0.4).ignoresSafeArea(.all)
-                    VStack {
-                        LoadingBar()
-                        Text("Carregando resultados")
-                            .font(.headline)
-                            .foregroundColor(.black)
-                            .onAppear {
-                                dailyLogManager.shouldRefresh = false
-                            }
-                        
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                                showLoadingBar = true
+                            })
+                        }
+                    
+                    if showLoadingBar {
+                        VStack {
+                            LoadingBar()
+                            Text("loading-text")
+                                .font(.headline)
+                                .foregroundColor(.black)
+                                .onAppear {
+                                    dailyLogManager.shouldRefresh = false
+                                }
+                            
+                        }
+                        .padding(.horizontal, 36)
+                        .padding(.vertical, 240)
+                        .background(Color.white.cornerRadius(25))
                     }
-                    .padding(.horizontal, 36)
-                    .padding(.vertical, 240)
-                    .background(Color.white.cornerRadius(25))
+                    
                     
                 }
                 
@@ -97,34 +110,37 @@ struct HomeView: View {
                     
                 }
                 
-            }
-            .onChange(of: webViewDelegate.tokenString) { newValue in
-                showWebView = false
-                
-            }
-            .onChange(of: webViewDelegate.TokenActivitySign) { newValue in
-                
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    Task {
-                        try await APIService.shared.list = APIService.shared.getRecentlyListened()
-                        try await APIService.shared.genres = APIService.shared.getRecentlyPlayedGenres()
-                        print(APIService.shared.dict)
-                        showWebView = false
-                        showLoadingPopup = false
-                        coordinator.goToTodaysResultsView()
-                    }
-                    
-                    
-                }
-                
-            }
+//            }
+            
             
             
             
             
         }
+        .onChange(of: webViewDelegate.tokenString) { newValue in
+            showWebView = false
+            
+        }
+        .onChange(of: webViewDelegate.TokenActivitySign) { newValue in
+            
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                Task {
+                    try await APIService.shared.list = APIService.shared.getRecentlyListened()
+                    try await APIService.shared.genres = APIService.shared.getRecentlyPlayedGenres()
+                    print(APIService.shared.dict)
+                    showWebView = false
+                    showLoadingPopup = false
+                    coordinator.goToTodaysResultsView()
+                }
+                
+                
+            }
+            
+        }
+        .background(Color.projectWhite)
         
         .onAppear {
+            
             dailyLogManager.AllowLogButtonIfNeeded { success in
                 enableButton = dailyLogManager.shouldRefresh
                 NotificationManager.shared.scheduleNotifications()

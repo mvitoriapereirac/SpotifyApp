@@ -11,7 +11,7 @@ class DailyLogManager: NSObject, ObservableObject {
 
     static let shared = DailyLogManager()
     private let defaults = UserDefaults.standard
-    private let defaultsKey = "lastLog"
+    private let defaultsKey = UserDefaultsConstants.lastLog
     private let calendar = Calendar.current
     var daysOfAbsence: [Int] = []
     @Published var shouldRefresh = false
@@ -21,7 +21,7 @@ class DailyLogManager: NSObject, ObservableObject {
 
         if isRefreshRequired() {
             // load the data
-            defaults.set(Date(), forKey: defaultsKey)
+//            defaults.set(Date(), forKey: defaultsKey)
             completion(true)
         } else {
             completion(false)

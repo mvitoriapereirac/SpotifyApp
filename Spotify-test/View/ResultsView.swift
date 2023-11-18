@@ -50,7 +50,7 @@ struct ResultsView: View {
                 return message
             }
         }
-        return "São tantas reflexões..."
+        return NSLocalizedString("thoughts-placeholder", comment: "")
     }
     
     
@@ -87,9 +87,9 @@ struct ResultsView: View {
                             FlowerAnimation(color: isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor))
                                 .padding(.vertical, 30)
                             
-                            Text("Combinação de cores do dia")
+                            Text("color-blending")
                                 .foregroundColor(.black)
-                                .font(.subheadline.monospaced())
+                                .font(.subheadline)
                                 .padding(.all, 16)
                             
                             VStack(alignment: .leading, spacing: 25) {
@@ -97,7 +97,7 @@ struct ResultsView: View {
                                 HStack {
                                     
                                     VStack(alignment: .leading, spacing: 8) {
-                                        Text("Seus resultados")
+                                        Text("your-results")
                                             .foregroundColor(.black)
                                             .font(.subheadline.bold())
                                         
@@ -144,7 +144,7 @@ struct ResultsView: View {
                                     VStack {
                                         
                                         if isFirstVisitToday {
-                                            TextField("", text: $userInput, prompt: Text("Em que pensei enquanto ouvi música hoje?").foregroundColor(isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor)), axis: .vertical)
+                                            TextField("", text: $userInput, prompt: Text("thoughts-input").foregroundColor(isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor)), axis: .vertical)
                                                 .extensionTextFieldView(roundedCornes: 8, startColor: .clear, endColor: .white, textColor: isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor))
                                                 .foregroundColor(.black)
                                                 .disableAutocorrection(true)
@@ -178,9 +178,7 @@ struct ResultsView: View {
                                             .foregroundColor(.black)
                                             .frame(width: 30, height: 25)
                                             .padding(.horizontal)
-//                                        Text("Anexe uma foto legal do seu dia!")
-//                                            .foregroundColor(.black)
-//                                            .font(.subheadline.bold())
+                          
                                         Spacer()
                                     }
                                     
@@ -226,12 +224,11 @@ struct ResultsView: View {
                                                 dayInfo.current = viewModel.current as NSObject
                                                 try? moc.save()
                                             }
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: { //trying to exhibit the animation of the button
                                                 coordinator.goToGridView()
-
-                                            })
+                                                
+                                            
                                         }) {
-                                            Text("Seus registros")
+                                            Text("your-registers")
                                         }
                                         .buttonStyle(NeumorphicButtonStyle(bgColor: isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor)))
                                         .padding()
@@ -260,7 +257,7 @@ struct ResultsView: View {
                         
                     }
                     .padding(.top, 112)
-
+                    
                     
                     
                 }
@@ -287,7 +284,7 @@ struct ResultsView: View {
             
         )
         .ignoresSafeArea(.all)
-       
+        
         
     }
 }

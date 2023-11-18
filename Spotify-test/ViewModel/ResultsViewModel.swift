@@ -20,17 +20,13 @@ class ResultsViewModel: ObservableObject {
     var total = 0.0
     @Published var current: [Double]
     @Published var currentColor: [ UIColor ] = []
-//    @Published var showDetailsView = false
     @Published var weekday = Calendar.current.component(.weekday, from: Date())
     @Published var day = Calendar.current.component(.day, from: Date())
     @Published var month = Calendar.current.component(.month, from: Date())
     @Published var color: UIColor?
-    let weekDays = ["Dom": 1, "Seg": 2, "Ter": 3, "Qua": 4, "Qui": 5, "Sex": 6, "Sab": 7]
-
+    let weekDays = [NSLocalizedString("sunday-3", comment: ""): 1, NSLocalizedString("monday-3", comment: ""): 2, NSLocalizedString("tuesday-3", comment: ""): 3, NSLocalizedString("wednesday-3", comment: ""): 4, NSLocalizedString("thursday-3", comment: ""): 5, NSLocalizedString("friday-3", comment: ""): 6, NSLocalizedString("saturday-3", comment: ""): 7]
     
-    @FetchRequest(sortDescriptors: []) var daysInfo: FetchedResults<DayInfo>
-    @Environment(\.managedObjectContext) var moc
-
+    
     var bright: Mood {
         let mainMoods = MainMoods()
         return mainMoods.bright
@@ -50,7 +46,7 @@ class ResultsViewModel: ObservableObject {
         let mainMoods = MainMoods()
         return mainMoods.soft
     }
-
+    
     init(apiService: APIService = APIService.shared, genres: [[String]], genresAmountDict: [String : Double], total: Double = 0.0, current: [ Double]) {
         self.apiService = apiService
         self.genres = genres
@@ -59,31 +55,20 @@ class ResultsViewModel: ObservableObject {
         self.current = current
         genresArray()
         
-//        persistData()
     }
     
     func genresArray() {
-//        apiService.getNameAndURLStrings()
         genres = apiService.genres
         
-        print("generos !!!!!")
-        print(weekday)
-        print(genres)
-        print(genres.count)
+        //        print(weekday)
+        //        print(genres)
+        //        print(genres.count)
         print(countGenres(genre: "pop"))
         makeGenresAmountDict()
         
         
     }
     
-//    func persistData() {
-//        let dayInfo = DayInfo(context: moc)
-//        dayInfo.weekday = Int16(self.weekday)
-//        dayInfo.color = makeUIColorBlend()
-//        dayInfo.day = Int16(self.day)
-//        dayInfo.month = Int16(self.month)
-//        try? moc.save()
-//    }
     
     func countGenres(genre: String) -> Double {
         var tracks = 0.0
@@ -101,7 +86,7 @@ class ResultsViewModel: ObservableObject {
     
     func makeGenresAmountDict() {
         var aux = 0.0
-
+        
         
         for i in bright.genres {
             
@@ -123,12 +108,12 @@ class ResultsViewModel: ObservableObject {
             } else {
                 aux += countGenres(genre: j)
             }
-
+            
         }
         genresAmountDict.updateValue(aux, forKey: dark.mood)
         aux = 0
         
-
+        
         
         for k in fun.genres {
             if aux == 0 {
@@ -149,7 +134,7 @@ class ResultsViewModel: ObservableObject {
         }
         genresAmountDict.updateValue(aux, forKey: soft.mood)
         aux = 0
-
+        
         
         print(genresAmountDict)
         makeGenresAmountStats()
@@ -183,7 +168,7 @@ class ResultsViewModel: ObservableObject {
         if !currentColor.isEmpty {
             let color = UIColor.blend(color1: self.currentColor[0], intensity1: self.current[0], color2: self.currentColor[1], intensity2: self.current[1], color3: self.currentColor[2], intensity3: self.current[2], color4: self.currentColor[3], intensity4: self.current[3])
             return color
-
+            
         }
         
         return UIColor()
@@ -199,18 +184,13 @@ class ResultsViewModel: ObservableObject {
         }
         print(dayName + ", " + String(day) + "/" + String(month))
         return dayName + ", " + String(day) + "/" + String(month)
-
+        
     }
     
 }
 
 
-struct GenresList {
-    static let brGenres = ["tropicalia", "bossa nova", "mpb", "samba", "pagode", "brega", "sertanejo", "funk", "forro", "brasileir"]
-    static let popGenres = ["pop", "edm", "house", "techno","trap", "disco", "r&b", "soul", "psy", "trance"]
-    static let rockGenres = ["rock", "metal", "screamo", "breakcore", "hip hop", "shoegaze", "rap", "prog", "punk"]
-    static let indieGenres = ["indie", "chamber", "bedroom", "soft", "lofi", "chill", "jazz"]
-}
+
 
 
 

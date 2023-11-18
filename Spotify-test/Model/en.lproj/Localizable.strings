@@ -1,0 +1,51 @@
+/*
+  Localizable (English).strings
+  Spotify-test
+
+  Created by mvitoriapereirac on 17/11/23.
+  
+*/
+//MARK: Onboarding
+"onboarding-title" = " Welcome";
+"onboarding-body" = "MusicMood is an app that helps you **live intentionally**. \n \n You know those times when you don't even know what you're feeling? That's where I come in! The music you listen to in your daily life can tell a beautiful story about who you are. \n \n How about embarking on a journey of self-discovery? \n\n For a better experience, please **authorize** the MusicMood app to send notifications to your device!";
+"onboarding-tagline" = "Paint your feelings. One song at a time.";
+
+//MARK: Home
+"allow-button" = "register your musical day";
+"deny-button" = "it's not time yet";
+"see-your-journal" = "look at your calendar";
+"loading-text" = "Loading results";
+
+//MARK: Results
+"color-blending" = "Color blending of the day";
+"your-results" = "Your results";
+"thoughts-input" = "What I thought while listening to music today?";
+"thoughts-placeholder" = "So many reflections...";
+"your-registers" = "Your registers";
+
+//MARK: Grid
+"sunday" = "S";
+"monday" = "M";
+"tuesday" = "T";
+"wednesday" = "W";
+"thursday" = "T";
+"friday" = "F";
+"saturday" = "S";
+
+//MARK: moods
+"festive" = "festive";
+"cheerful" = "cheerful";
+"introspective" = "introspective";
+"soft" = "soft";
+
+//MARK: weekdays
+"sunday-3" = "Sun";
+"monday-3" = "Mon";
+"tuesday-3" = "Tue";
+"wednesday-3" = "Wed";
+"thursday-3" = "Thu";
+"friday-3" = "Fri";
+"saturday-3" = "Sat";
+
+//MARK: Select image
+"select-img" = "Select an image";

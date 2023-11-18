@@ -11,6 +11,7 @@ class GridViewModel: ObservableObject {
     
     static let shared = GridViewModel()
     @Published var dayInfo: FetchedResults<DayInfo>.Element? = nil
+
     
     
     
