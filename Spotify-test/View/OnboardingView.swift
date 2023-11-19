@@ -15,6 +15,7 @@ struct OnboardingView: View {
     @State private var expandPopupWidth = false
     @State private var showIntro = false
     @State private var touchedChevron = 0
+    @State private var expandPopupHeight = false
     @EnvironmentObject var coordinator: Coordinator
     
     var body: some View {
@@ -55,7 +56,7 @@ struct OnboardingView: View {
                 
                 ZStack {
                     Color.projectWhite.cornerRadius(25)
-                        .scaleEffect(x: expandPopupWidth ? 1 : 0, y: expandPopupWidth ? 1.2 : 0)
+                        .scaleEffect(x: expandPopupWidth ? 1 : 0, y: expandPopupHeight ? 1.2 : 0)
                         .onAppear{
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                                 showIntro = true
@@ -111,7 +112,10 @@ struct OnboardingView: View {
                 .padding(.horizontal, 36)
                 .padding(.vertical, 170)
                 .onAppear {
-                    expandPopupWidth.toggle()
+                    expandPopupHeight.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                        expandPopupWidth.toggle()
+                    })
                 }
                 .animation(Animation.easeInOut(duration: 1).delay(1))
                 
