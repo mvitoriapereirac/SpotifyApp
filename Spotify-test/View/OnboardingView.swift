@@ -14,6 +14,7 @@ struct OnboardingView: View {
     @State private var showAboutPopup = false
     @State private var expandPopupWidth = false
     @State private var showIntro = false
+    @State private var touchedChevron = 0
     @EnvironmentObject var coordinator: Coordinator
     
     var body: some View {
@@ -65,7 +66,7 @@ struct OnboardingView: View {
                     if showIntro {
                         VStack {
                             HStack {
-                                Text("onboarding-title")
+                                Text(touchedChevron == 0 ? "onboarding-title" : "onboarding-how-it-works")
                                     .foregroundColor(.projectBlack)
                                     .font(.title3.bold().italic())
                                     .padding()
@@ -80,15 +81,21 @@ struct OnboardingView: View {
                                 .frame(width: 280, height: 2)
                                 .foregroundColor(Color(.purple))
                             Spacer()
-                            Text("onboarding-body")
+                            
+                            
+                            Text(touchedChevron == 0 ? "onboarding-body" : "onboarding-explanation")
                                 .font(.body.italic())
                                 .padding(.bottom, 16)
                                 .padding(.horizontal, 16)
                                 .foregroundColor(.projectBlack)
                             
                             Button(action: {
-                                NotificationManager.shared.requestAuthorization()
-                                coordinator.goToHomePage()
+                                touchedChevron += 1
+                                if touchedChevron == 2 {
+                                    NotificationManager.shared.requestAuthorization()
+                                    coordinator.goToHomePage()
+                                }
+                                
                             }){
                                 Image(systemName: "chevron.right")
                                     .resizable()

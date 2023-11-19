@@ -10,6 +10,9 @@
 "onboarding-body" = "MusicMood é um aplicativo que te ajuda a **viver intencionalmente**. \n \n Sabe quando nem você sabe o que sente? É aí que te ajudo! As músicas que você escuta no cotidiano podem contar uma bela história sobre quem você é. \n \n Que tal se aventurar numa jornada de autodescoberta? \n\n Para uma melhor experiência, por favor **autorize o envio de notificações do MusicMood** para seu dispositivo!";
 "onboarding-tagline" = "Pinte suas emoções, uma música por vez";
 
+"onboarding-how-it-works" = "Como funciona?";
+"onboarding-explanation" = "Ao fim de cada dia, você poderá descobrir e registrar seu humor com base no que vem escutado. Também poderá anotar seus pensamentos e guardar fotos que te lembrem dos momentos vividos. Para que você nunca esqueça, o app te envia notificações diárias  - pontualmente às 18h. Quanto mais você registrar seus dias, mais colorida e interessante se tornará sua agenda! \n \n **Vamo lá?**";
+
 //MARK: Home
 "allow-button" = "registre seu dia musical";
 "deny-button" = "ainda não está na hora";
