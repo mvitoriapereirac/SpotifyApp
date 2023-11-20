@@ -55,4 +55,6 @@
 "select-img" = "Selecione uma imagem";
 
 
-
+//MARK: Notification
+"notification-title" = "Tá na hora";
+"notification-body" = "Descubra agora suas tendências musicais e emoções de hoje";

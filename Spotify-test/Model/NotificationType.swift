@@ -22,14 +22,15 @@ enum NotificationType {
     var title: String {
         switch self {
         case .timeIsUp:
-            return "Tá na hora"
+            return NSLocalizedString("notification-title", comment: "")
+            
         }
     }
     
     var body: String {
         switch self {
         case .timeIsUp:
-            return "Descubra agora suas tendências musicais (e afetivas!) de hoje"
+            return NSLocalizedString("notification-body", comment: "")
         }
     }
 

@@ -19,7 +19,7 @@ struct LoadingBar: View {
                 .clipShape(Rectangle().offset(x: moveRightLeft ? 80 : -80))
                 .frame(width: 100, height: 6, alignment: .leading)
                 .foregroundColor(Color(.systemMint))
-//                .offset(x: moveRightLeft ? 14 : -14)
+                .offset(x: moveRightLeft ? 14 : -14)
                 .animation(Animation.easeInOut(duration: 0.5).delay(0.2).repeatForever(autoreverses: true))
                 .onAppear {
                     moveRightLeft.toggle()

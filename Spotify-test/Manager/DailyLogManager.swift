@@ -20,6 +20,7 @@ class DailyLogManager: NSObject, ObservableObject {
     func AllowLogButtonIfNeeded(completion: (Bool) -> Void) {
 
         if isRefreshRequired() {
+            print(Calendar.current.locale)
             // load the data
 //            defaults.set(Date(), forKey: defaultsKey)
             completion(true)

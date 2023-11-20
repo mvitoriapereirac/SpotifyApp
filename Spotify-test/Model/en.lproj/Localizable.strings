@@ -22,7 +22,7 @@
 //MARK: Results
 "color-blending" = "Color blending of the day";
 "your-results" = "Your results";
-"thoughts-input" = "What I thought while listening to music today?";
+"thoughts-input" = "Thoughts while listening to music today?";
 "thoughts-placeholder" = "So many reflections...";
 "your-registers" = "Your registers";
 
@@ -52,3 +52,7 @@
 
 //MARK: Select image
 "select-img" = "Select an image";
+
+//MARK: Notification
+"notification-title" = "It's time";
+"notification-body" = "Find out right now today's musical and emotional highlights";

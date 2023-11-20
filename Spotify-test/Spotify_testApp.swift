@@ -16,5 +16,6 @@ struct Spotify_testApp: App {
             AppNavigation()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
+        
     }
 }

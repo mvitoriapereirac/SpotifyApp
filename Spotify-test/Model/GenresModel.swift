@@ -15,7 +15,7 @@ struct GenresResponse: Codable {
 }
 
 struct GenresList {
-    static let brGenres = ["tropicalia", "bossa nova", "mpb", "samba", "pagode", "brega", "sertanejo", "funk", "forro", "brasileir"]
+    static let brGenres = ["tropicalia", "bossa nova", "mpb", "samba", "pagode", "brega", "sertanejo", "funk", "forr", "brasileir"]
     static let popGenres = ["pop", "edm", "house", "techno","trap", "disco", "r&b", "soul", "psy", "trance"]
     static let rockGenres = ["rock", "metal", "screamo", "breakcore", "hip hop", "shoegaze", "rap", "prog", "punk"]
     static let indieGenres = ["indie", "chamber", "bedroom", "soft", "lofi", "chill", "jazz"]

@@ -144,7 +144,7 @@ struct ResultsView: View {
                                     VStack {
                                         
                                         if isFirstVisitToday {
-                                            TextField("", text: $userInput, prompt: Text("thoughts-input").foregroundColor(isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor)), axis: .vertical)
+                                            TextField("", text: $userInput, prompt: Text(LocalizedStringKey("thoughts-input")).foregroundColor(isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor)), axis: .vertical)
                                                 .extensionTextFieldView(roundedCornes: 8, startColor: .clear, endColor: .white, textColor: isFirstVisitToday ? Color(viewModel.makeUIColorBlend()) : Color(chosenColor))
                                                 .foregroundColor(.black)
                                                 .disableAutocorrection(true)
