@@ -6,6 +6,7 @@
 Utiliza CoreData e integra com a Web API do Spotify. Para testá-lo, utilize os seguintes dados ao fazer login no Spotify:
 
  email: musicmoodtester@gmail.com
+ 
  senha: musicmoodtest
 
 O app é motivado pela minha paixão por música, meus conhecimentos em psicologia, assim como pelo meu interesse pela criação de soluções digitais. O objetivo é formar um diário afetivo, para que o usuário consiga entender suas emoções com mais facilidade ao longo do tempo.
