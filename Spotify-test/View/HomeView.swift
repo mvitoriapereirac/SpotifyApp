@@ -36,10 +36,10 @@ struct HomeView: View {
                 
                 VStack(spacing: 40) {
                     Button(action: {
-                        if dailyLogManager.shouldRefresh {
+//                        if dailyLogManager.shouldRefresh {
                             showWebView = true
                             
-                        }
+//                        }
                         
                     })
                     {
@@ -125,9 +125,8 @@ struct HomeView: View {
             
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 Task {
-                    try await APIService.shared.list = APIService.shared.getRecentlyListened()
-                    try await APIService.shared.genres = APIService.shared.getRecentlyPlayedGenres()
-                    print(APIService.shared.dict)
+                    try await APIService.shared.getRecentlyListened()
+                    try await APIService.shared.getRecentlyPlayedGenres()
                     showWebView = false
                     showLoadingPopup = false
                     coordinator.goToTodaysResultsView()

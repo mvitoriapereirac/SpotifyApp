@@ -67,8 +67,8 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate, Observabl
         content.body = typeOfNotification.body
         content.sound = typeOfNotification.sound
         var dateComp = DateComponents()
-        dateComp.hour = 18
-        dateComp.minute = 00
+        dateComp.hour = 14
+        dateComp.minute = 35
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComp, repeats: typeOfNotification.repeats)
         let request = UNNotificationRequest(identifier: typeOfNotification.identifier, content: content, trigger: trigger)

@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "94C47000-2861-48A8-A0F1-6BAFE513993E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    },
+    {
+      "id" : "3243A04C-A6B4-4311-9805-BE3F9702EC68",
+      "name" : "Configuration 2",
+      "options" : {
+
+      }
+    },
+    {
+      "id" : "168CBD34-0B03-429C-80F2-2239305DEFEC",
+      "name" : "Configuration 3",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Spotify-test.xcodeproj",
+        "identifier" : "BCC72CB02B1A7A450006848B",
+        "name" : "Spotify-testTests"
+      }
+    }
+  ],
+  "version" : 1
+}

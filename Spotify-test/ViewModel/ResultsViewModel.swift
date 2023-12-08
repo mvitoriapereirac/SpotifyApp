@@ -24,6 +24,7 @@ class ResultsViewModel: ObservableObject {
     @Published var day = Calendar.current.component(.day, from: Date())
     @Published var month = Calendar.current.component(.month, from: Date())
     @Published var color: UIColor?
+    var double: Double = 0.0
     let weekDays = [NSLocalizedString("sunday-3", comment: ""): 1, NSLocalizedString("monday-3", comment: ""): 2, NSLocalizedString("tuesday-3", comment: ""): 3, NSLocalizedString("wednesday-3", comment: ""): 4, NSLocalizedString("thursday-3", comment: ""): 5, NSLocalizedString("friday-3", comment: ""): 6, NSLocalizedString("saturday-3", comment: ""): 7]
     
     

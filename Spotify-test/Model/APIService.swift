@@ -7,6 +7,24 @@
 
 import Foundation
 
+protocol Networking {
+    func fetchData(from urlRequest: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) async throws
+}
+
+class NetworkService: Networking {
+    func fetchData(from urlRequest: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) async throws {
+//        let session = URLSession.shared.dataTask(with: urlRequest, completionHandler: completion)
+        let session = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            // Pass the data, response, and error to the completion handler
+            completion(data, response, error)
+        }
+        session.resume()
+
+        
+       
+    }
+}
+
 class APIService {
     static let shared = APIService()
     var list: [LastListenedItem] = []
@@ -29,33 +47,7 @@ class APIService {
         return URLRequest(url: url)
     }
     
-    func createURLSearchRequest(searchQuery: String) -> URLRequest? {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = APIConstants.apiHost
-        components.path = "/v1/search"
-        
-        components.queryItems = [
-            URLQueryItem(name: "type", value: "track"),
-            URLQueryItem(name: "query", value: searchQuery)
-        ]
-        
-        guard let url = components.url else { return nil }
-        print(url)
-        var urlRequest = URLRequest(url: url)
-        print(urlRequest)
-        
-        let token: String = UserDefaults.standard.value(forKey: "Authorization") as! String
-        print("token: " + token)
-        
-        urlRequest.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
-        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        urlRequest.httpMethod = "GET"
-        
-        return urlRequest
-        
-    }
-    
+
     
     func createURLRecentlyListenedRequest() -> URLRequest? {
         var components = URLComponents()
@@ -64,9 +56,7 @@ class APIService {
         components.path = APIConstants.recentlyPlayedPath
         
         guard let url = components.url else { return nil }
-        print(url)
         var urlRequest = URLRequest(url: url)
-        print(urlRequest)
         
         let token: String = UserDefaults.standard.value(forKey: "Authorization") as! String
         print("token: " + token)
@@ -78,35 +68,43 @@ class APIService {
         return urlRequest
     }
     
-    func getRecentlyListened() async throws -> [LastListenedItem] {
+    func getRecentlyListened() async throws {
         defaults.set(Date(), forKey: lastLogKey)
-
+        var list: [LastListenedItem] = []
         guard let urlRequest = createURLRecentlyListenedRequest() else { throw NetworkError.invalidURL }
         print(urlRequest)
-        
         let session = URLSession.shared
-        do {
-            let (data, _) = try await session.data(for: urlRequest)
-            let decoder = JSONDecoder()
-            let results = try decoder.decode(LastListenedResponse.self, from: data)
-            
-            
-            let list = results.items
-            
-            print(list)
-            print("lista ouvidos recentes")
-            print(list.count)
-            dict = APIService.shared.transformIntoDict(list: list)
-            
-            return list
-        }
-        catch {
-            print("error: ", error)
-            
-        }
-        
-        return []
-        
+//        let fetchData = try await NetworkService().fetchData(from: urlRequest) { data, response, error in
+
+//        try await NetworkService().fetchData(from: urlRequest) { data, response, error in
+//            guard let data = data else {
+//                print("URLSession dataTask error:", error ?? "nil")
+//                return
+//            }
+
+
+
+            do {
+
+
+
+                let (data, _) = try await session.data(for: urlRequest)
+                let decoder = JSONDecoder()
+                let results = try decoder.decode(LastListenedResponse.self, from: data)
+
+
+                list = results.items
+
+                print(list)
+                print("lista ouvidos recentes")
+                print(list.count)
+                self.dict = APIService.shared.transformIntoDict(list: list)
+
+            }
+            catch {
+                print("error: ", error)
+
+            }
     }
     
     
@@ -155,14 +153,13 @@ class APIService {
                 }
             }
         }
-        print("lista dict")
-        print(dict)
+   
         return dict
         
     }
     
-    func getRecentlyPlayedGenres() async throws -> [[String]] {
-        var genresArray: [[String]] = []
+    func getRecentlyPlayedGenres() async throws {
+//        var genresArray: [[String]] = []
         guard let urlRequestArray = createArtistsGenreURLRequests(dict: dict) else { throw NetworkError.invalidURL }
         let session = URLSession.shared
         for item in urlRequestArray {
@@ -171,7 +168,7 @@ class APIService {
                 let decoder = JSONDecoder()
                 let results = try decoder.decode(GenresResponse.self, from: data)
                 let genres = results.genres
-                genresArray.append(genres)
+                self.genres.append(genres)
                 
             } catch {
                 print("error: ", error)
@@ -180,9 +177,7 @@ class APIService {
             }
         }
         
-        
-        return genresArray
-        
+                
     }
     
     
