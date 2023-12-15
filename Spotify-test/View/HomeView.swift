@@ -36,10 +36,10 @@ struct HomeView: View {
                 
                 VStack(spacing: 40) {
                     Button(action: {
-//                        if dailyLogManager.shouldRefresh {
+                        if dailyLogManager.shouldRefresh {
                             showWebView = true
                             
-//                        }
+                        }
                         
                     })
                     {
