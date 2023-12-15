@@ -6,21 +6,29 @@
 //
 
 import XCTest
-import OHHTTPStubs
+//import OHHTTPStubs
 
 
 @testable import Spotify_test
 final class APIServiceTests: XCTestCase {
-    let apiService = APIService()
-
+    let apiService = APIService(networkService: MockNetworkService())
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
+    override func setUp() {
+        super.setUp()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -28,7 +36,7 @@ final class APIServiceTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
@@ -37,41 +45,36 @@ final class APIServiceTests: XCTestCase {
     }
     
     func testGetRecentlyListened_SuccessfulResponse() {
-        // Mock a URLRequest for testing
-        let testURL = "https://mockurl.com"
-
-        // Get mock data for the response
-        let mockData = Data() // Replace Data() with your mock JSON data
-
-        let mockedData = createMockLastListenedResponse()
-
-        // Stub the network request using a mock library or your own stub mechanism
-        // For example:
-        stub(condition: isHost(testURL)) { _ in
-                    return HTTPStubsResponse(data: mockData, statusCode: 200, headers: nil)
-                }
-//        MockNetworkStub.stubRequest(for: testRequest, withResponseData: mockData, statusCode: 200)
-
-//        let expectation = XCTestExpectation(description: "Fetching recently listened")
-
-        // Test the API service function with the mocked URLRequest
-        // Create an expectation for the asynchronous call
-              let expectation = expectation(description: "Fetching recently listened")
-              
-              // Call the asynchronous method you want to test
-        Task {
-                    do {
-                        let _ = try await apiService.getRecentlyListened()
-                        
-                        // Fulfill the expectation once the async operation is complete
-                        expectation.fulfill()
-                    } catch {
-                        XCTFail("Error: \(error)") // Fail the test in case of an error
-                    }
-                }
-              
-              // Wait for the expectation to be fulfilled within a certain time
-              waitForExpectations(timeout: 5) // Adjust the timeout as needed
-          }
-
+        let expectation = expectation(description: "Fetching recently listened")
+        
+        // Call the asynchronous method I want to test
+        let task = Task {
+            do {
+                // Await the method being tested
+                try await apiService.getRecentlyListened()
+                
+                // Assert: Validate the results or behavior based on the awaited method
+                print(apiService.dict)
+                XCTAssertEqual(apiService.dict.count, 22)
+                
+                // Fulfill the expectation, indicating the async operation completed successfully
+                expectation.fulfill()
+                
+            } catch {
+                // Fail the test in case of an error during the async operation
+                XCTFail("Error: \(error)")
+            }
+        }
+        
+        // Wait for the expectation to be fulfilled within a certain time
+        waitForExpectations(timeout: 5) { error in
+            if let error = error {
+                XCTFail("Timeout waiting for expectation: \(error)")
+            }
+            
+            // After the expectation is fulfilled or timed out, explicitly cancel the task
+            task.cancel()
+        }
+    }
+    
 }

@@ -1962,8 +1962,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
             endingLineNumber = "72"
-            landmarkName = "APIService"
-            landmarkType = "3">
+            landmarkName = "getRecentlyListened()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "75725F51-FB79-4FBC-B8AB-9A2093A35674 - 63d22c2ba6ea9cc"

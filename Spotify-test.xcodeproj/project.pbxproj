@@ -39,7 +39,8 @@
 		BC61DF432AF187FB0035B24A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF422AF187FB0035B24A /* DataManager.swift */; };
 		BC61DF452AF19D7B0035B24A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF442AF19D7B0035B24A /* Coordinator.swift */; };
 		BC61DF472AF19E560035B24A /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61DF462AF19E560035B24A /* AppNavigation.swift */; };
-		BC78731F2B1E477900E3F06A /* OHTTPStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC78731E2B1E477900E3F06A /* OHTTPStubs.swift */; };
+		BC6540992B2CE1D400AD8B8F /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6540982B2CE1D400AD8B8F /* MockNetworkService.swift */; };
+		BC65409B2B2CE97700AD8B8F /* MockJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC65409A2B2CE97700AD8B8F /* MockJSON.swift */; };
 		BC9254D62AFD26910028DE45 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9254D52AFD26910028DE45 /* PhotoImage.swift */; };
 		BC9254D82AFD3B5B0028DE45 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9254D72AFD3B5B0028DE45 /* PhotoModel.swift */; };
 		BCC72CB42B1A7A450006848B /* Spotify_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC72CB32B1A7A450006848B /* Spotify_testTests.swift */; };
@@ -115,7 +116,8 @@
 		BC61DF422AF187FB0035B24A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BC61DF442AF19D7B0035B24A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BC61DF462AF19E560035B24A /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
-		BC78731E2B1E477900E3F06A /* OHTTPStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHTTPStubs.swift; sourceTree = "<group>"; };
+		BC6540982B2CE1D400AD8B8F /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		BC65409A2B2CE97700AD8B8F /* MockJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSON.swift; sourceTree = "<group>"; };
 		BC9254D52AFD26910028DE45 /* PhotoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
 		BC9254D72AFD3B5B0028DE45 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		BCC72CA82B1A795B0006848B /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		BC5508952AC5F712005817BD /* Spotify-test */ = {
 			isa = PBXGroup;
 			children = (
+				BC6540972B2CE1B800AD8B8F /* Mock */,
 				BC5508962AC5F712005817BD /* Spotify_testApp.swift */,
 				BC2108682B00513700ECFE25 /* View */,
 				BC2108692B00514800ECFE25 /* Model */,
@@ -293,7 +296,6 @@
 				BC2108792B005D5100ECFE25 /* Navigation */,
 				BC55089A2AC5F713005817BD /* Assets.xcassets */,
 				BC55089C2AC5F713005817BD /* Preview Content */,
-				BC78731E2B1E477900E3F06A /* OHTTPStubs.swift */,
 			);
 			path = "Spotify-test";
 			sourceTree = "<group>";
@@ -304,6 +306,15 @@
 				BC55089D2AC5F713005817BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC6540972B2CE1B800AD8B8F /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				BC6540982B2CE1D400AD8B8F /* MockNetworkService.swift */,
+				BC65409A2B2CE97700AD8B8F /* MockJSON.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		BCC72CB22B1A7A450006848B /* Spotify-testTests */ = {
@@ -509,7 +520,6 @@
 				BCE9A1BC2ADF6360001D6564 /* NetworkError.swift in Sources */,
 				BC21087B2B007C6A00ECFE25 /* LoadingBar.swift in Sources */,
 				BC5508972AC5F712005817BD /* Spotify_testApp.swift in Sources */,
-				BC78731F2B1E477900E3F06A /* OHTTPStubs.swift in Sources */,
 				BCF590B72AED6B100037E6C1 /* Rectangle.swift in Sources */,
 				BCF2B7252AF2B89300872372 /* DailyLogManager.swift in Sources */,
 				BC2108852B055E8200ECFE25 /* NotificationsManager.swift in Sources */,
@@ -522,8 +532,10 @@
 				BC2108722B00547200ECFE25 /* GenresModel.swift in Sources */,
 				BC61DF452AF19D7B0035B24A /* Coordinator.swift in Sources */,
 				BC61DF412AF183BB0035B24A /* DayInfo.xcdatamodeld in Sources */,
+				BC6540992B2CE1D400AD8B8F /* MockNetworkService.swift in Sources */,
 				BC60DE422AFDC6BC00DD2DD8 /* DailyStats.swift in Sources */,
 				BC21087D2B0105F300ECFE25 /* TexFieldStyle.swift in Sources */,
+				BC65409B2B2CE97700AD8B8F /* MockJSON.swift in Sources */,
 				BC2108672AFFEF3D00ECFE25 /* SavedImageManager.swift in Sources */,
 				BC9254D62AFD26910028DE45 /* PhotoImage.swift in Sources */,
 				BCFF30442AFBE05B0063AF61 /* StringProtocol.swift in Sources */,

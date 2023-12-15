@@ -9,12 +9,12 @@ import Foundation
 
 
 protocol NetworkServiceProtocol {
-    func fetchData(for urlRequest: URLRequest) async throws -> (Data, URLResponse)
+    func fetchData(for urlRequest: URLRequest, get data: String) async throws -> (Data, URLResponse)
     // ... other networking methods
 }
 
 class NetworkService: NetworkServiceProtocol {
-    func fetchData(for urlRequest: URLRequest) async throws -> (Data, URLResponse) {
+    func fetchData(for urlRequest: URLRequest, get data: String) async throws -> (Data, URLResponse) {
         // Real implementation using URLSession
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         return (data, response)
@@ -73,10 +73,10 @@ class APIService {
         defaults.set(Date(), forKey: lastLogKey)
         var list: [LastListenedItem] = []
         guard let urlRequest = createURLRecentlyListenedRequest() else { throw NetworkError.invalidURL }
-        
+        print(urlRequest.url)
             do {
 
-                let (data, _) = try await networkService.fetchData(for: urlRequest)
+                let (data, _) = try await networkService.fetchData(for: urlRequest, get: "Songs")
                 let decoder = JSONDecoder()
                 let results = try decoder.decode(LastListenedResponse.self, from: data)
 
@@ -150,7 +150,7 @@ class APIService {
         guard let urlRequestArray = createArtistsGenreURLRequests(dict: dict) else { throw NetworkError.invalidURL }
         for item in urlRequestArray {
             do {
-                let (data, _) = try await networkService.fetchData(for: item)
+                let (data, _) = try await networkService.fetchData(for: item, get: "Genres")
                 let decoder = JSONDecoder()
                 let results = try decoder.decode(GenresResponse.self, from: data)
                 let genres = results.genres

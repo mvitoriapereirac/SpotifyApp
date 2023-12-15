@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1CFAE596-D4B6-4768-9253-A093EEBD9292"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69B7BB00-3623-40B0-992F-9B46A38B950D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Spotify-test/Model/APIService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "getRecentlyListened()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "69B7BB00-3623-40B0-992F-9B46A38B950D - 99fb72335e8a95fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.APIService.createURLRecentlyListenedRequest() -&gt; Swift.Optional&lt;Foundation.URLRequest&gt;"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "896">
+               </Location>
+               <Location
+                  uuid = "69B7BB00-3623-40B0-992F-9B46A38B950D - 99fb72335e8a95fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Spotify_test.APIService.createURLRecentlyListenedRequest() -&gt; Swift.Optional&lt;Foundation.URLRequest&gt;"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "1148">
+               </Location>
+               <Location
+                  uuid = "69B7BB00-3623-40B0-992F-9B46A38B950D - bbe3ae6013d7e80b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "69B7BB00-3623-40B0-992F-9B46A38B950D - 860c5ee55dbbb415"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "69B7BB00-3623-40B0-992F-9B46A38B950D - 2d294de5902aae0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "69B7BB00-3623-40B0-992F-9B46A38B950D - 158bdda4d0bc0d0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
+                  moduleName = "Spotify-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
