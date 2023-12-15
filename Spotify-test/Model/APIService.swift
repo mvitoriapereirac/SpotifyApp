@@ -10,12 +10,10 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     func fetchData(for urlRequest: URLRequest, get data: String) async throws -> (Data, URLResponse)
-    // ... other networking methods
 }
 
 class NetworkService: NetworkServiceProtocol {
     func fetchData(for urlRequest: URLRequest, get data: String) async throws -> (Data, URLResponse) {
-        // Real implementation using URLSession
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         return (data, response)
     }
