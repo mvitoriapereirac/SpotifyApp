@@ -7,32 +7,33 @@
 
 import Foundation
 
-protocol Networking {
-    func fetchData(from urlRequest: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) async throws
+
+protocol NetworkServiceProtocol {
+    func fetchData(for urlRequest: URLRequest) async throws -> (Data, URLResponse)
+    // ... other networking methods
 }
 
-class NetworkService: Networking {
-    func fetchData(from urlRequest: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) async throws {
-//        let session = URLSession.shared.dataTask(with: urlRequest, completionHandler: completion)
-        let session = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            // Pass the data, response, and error to the completion handler
-            completion(data, response, error)
-        }
-        session.resume()
-
-        
-       
+class NetworkService: NetworkServiceProtocol {
+    func fetchData(for urlRequest: URLRequest) async throws -> (Data, URLResponse) {
+        // Real implementation using URLSession
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        return (data, response)
     }
 }
 
+
 class APIService {
-    static let shared = APIService()
+    static let shared = APIService(networkService: NetworkService())
     var list: [LastListenedItem] = []
     var dict: [String : String] = [:]
     var genres: [[String]] = []
     let defaults = UserDefaults.standard
     let lastLogKey = UserDefaultsConstants.lastLog
-    
+    let networkService: NetworkServiceProtocol // Injected dependency
+       
+       init(networkService: NetworkServiceProtocol) {
+           self.networkService = networkService
+       }
     
     func getAccessTokenURL() -> URLRequest? {
         var components = URLComponents()
@@ -72,23 +73,10 @@ class APIService {
         defaults.set(Date(), forKey: lastLogKey)
         var list: [LastListenedItem] = []
         guard let urlRequest = createURLRecentlyListenedRequest() else { throw NetworkError.invalidURL }
-        print(urlRequest)
-        let session = URLSession.shared
-//        let fetchData = try await NetworkService().fetchData(from: urlRequest) { data, response, error in
-
-//        try await NetworkService().fetchData(from: urlRequest) { data, response, error in
-//            guard let data = data else {
-//                print("URLSession dataTask error:", error ?? "nil")
-//                return
-//            }
-
-
-
+        
             do {
 
-
-
-                let (data, _) = try await session.data(for: urlRequest)
+                let (data, _) = try await networkService.fetchData(for: urlRequest)
                 let decoder = JSONDecoder()
                 let results = try decoder.decode(LastListenedResponse.self, from: data)
 
@@ -159,12 +147,10 @@ class APIService {
     }
     
     func getRecentlyPlayedGenres() async throws {
-//        var genresArray: [[String]] = []
         guard let urlRequestArray = createArtistsGenreURLRequests(dict: dict) else { throw NetworkError.invalidURL }
-        let session = URLSession.shared
         for item in urlRequestArray {
             do {
-                let (data, _) = try await session.data(for: item)
+                let (data, _) = try await networkService.fetchData(for: item)
                 let decoder = JSONDecoder()
                 let results = try decoder.decode(GenresResponse.self, from: data)
                 let genres = results.genres

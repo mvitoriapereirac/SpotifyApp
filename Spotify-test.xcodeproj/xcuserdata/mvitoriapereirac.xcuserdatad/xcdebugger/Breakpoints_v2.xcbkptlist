@@ -1921,54 +1921,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A961C482-4104-4716-B421-D70C2C81BA93"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/Model/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetchData(from:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A961C482-4104-4716-B421-D70C2C81BA93 - a752e8ff4f182bc6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Spotify_test.NetworkService.fetchData(from: Foundation.URLRequest, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) async throws -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "392">
-               </Location>
-               <Location
-                  uuid = "A961C482-4104-4716-B421-D70C2C81BA93 - a752e8ff4f1828be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Spotify_test.NetworkService.fetchData(from: Foundation.URLRequest, completion: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) async throws -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "420">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "96E95803-62C3-4E09-A6E4-7A84E5028D59"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1976,8 +1928,8 @@
             filePath = "Spotify-test/Model/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "getRecentlyListened()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1992,24 +1944,8 @@
             filePath = "Spotify-test/Model/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "getRecentlyListened()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AC3F1973-C8B9-4C9C-9D99-E775B7476F97"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/Model/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "getRecentlyListened()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2024,10 +1960,10 @@
             filePath = "Spotify-test/Model/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "getRecentlyListened()"
-            landmarkType = "7">
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "APIService"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "75725F51-FB79-4FBC-B8AB-9A2093A35674 - 63d22c2ba6ea9cc"
@@ -2058,99 +1994,6 @@
                   startingLineNumber = "74"
                   endingLineNumber = "74"
                   offsetFromSymbolStart = "124">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D08A97B0-9751-47F6-A520-01687A5B7535"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Spotify-test/Model/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "getRecentlyListened()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D08A97B0-9751-47F6-A520-01687A5B7535 - bbe3ae6013d7ead6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "648">
-               </Location>
-               <Location
-                  uuid = "D08A97B0-9751-47F6-A520-01687A5B7535 - 860c5ee55dbbb6c8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "D08A97B0-9751-47F6-A520-01687A5B7535 - 2d294de5902aacd0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "D08A97B0-9751-47F6-A520-01687A5B7535 - 158bdda4d0bc0fd1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "D08A97B0-9751-47F6-A520-01687A5B7535 - 2d294de5902aadd8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Spotify_test.APIService.getRecentlyListened() async throws -&gt; ()"
-                  moduleName = "Spotify-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mvitoriapereirac/Desktop/Spotify-test/Spotify-test/Model/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "184">
                </Location>
             </Locations>
          </BreakpointContent>
